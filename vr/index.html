@@ -31,6 +31,7 @@
 	</head>
 	<body>
 		<script src="js/three.js"></script>
+		<script src="js/DeviceOrientationControls.js"></script>
 		<script src="js/CSS3DRenderer.js"></script>
 
 		<div id="info"><a href="http://threejs.org" target="_blank" rel="noopener">three.js css3d</a> - panorama demo. cubemap by <a href="http://www.humus.name/index.php?page=Textures" target="_blank" rel="noopener">Humus</a>.</div>
@@ -38,20 +39,29 @@
 		<script>
 
 			var camera, scene, renderer, background;
+			var controls;
 			var geometry, material, mesh;
 			var target = new THREE.Vector3();
 
 			var lon = 90, lat = 0;
 			var phi = 0, theta = 0;
 
-			var touchX, touchY;
+            var touchX, touchY;
+            
+			var gyroPresent = false;
+			window.addEventListener("devicemotion", function(event){
+				if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
+					gyroPresent = true;
+			});
 
 			init();
 			animate();
 
 			function init() {
 
-				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1000 );
+                camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1000 );
+
+                controls = new THREE.DeviceOrientationControls( camera );
 
                 scene = new THREE.Scene();
 
@@ -195,18 +205,22 @@
 
 				requestAnimationFrame( animate );
 
-				lon +=  0.1;
-				lat = Math.max( - 85, Math.min( 85, lat ) );
-				phi = THREE.Math.degToRad( 90 - lat );
-				theta = THREE.Math.degToRad( lon );
+				if (gyroPresent) {
+                    controls.update();
+                } else {
+                    lon +=  0.0;
+                    lat = Math.max( - 85, Math.min( 85, lat ) );
+                    phi = THREE.Math.degToRad( 90 - lat );
+                    theta = THREE.Math.degToRad( lon );
 
-				target.x = Math.sin( phi ) * Math.cos( theta );
-				target.y = Math.cos( phi );
-				target.z = Math.sin( phi ) * Math.sin( theta );
+                    target.x = Math.sin( phi ) * Math.cos( theta );
+                    target.y = Math.cos( phi );
+                    target.z = Math.sin( phi ) * Math.sin( theta );
 
-				camera.lookAt( target );
+                    camera.lookAt( target );
+                }
 
-				renderer.render( scene, camera );
+                renderer.render( scene, camera );
 
 			}
 
