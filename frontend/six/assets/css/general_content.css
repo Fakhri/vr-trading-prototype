@@ -16,7 +16,6 @@
 /* container */
     #container {
         height:100%;
-        min-width:1024px;
         background-color:#303135;
         overflow:hidden;
         margin-bottom:-2px;
@@ -92,7 +91,7 @@
     #main {
         position:relative;
         height:100%;
-        margin:0 0 0 215px;
+        margin:0 0 0 0;
         z-index:1;
     }
     body.plain #main {
@@ -107,12 +106,12 @@
     }
     #content {
         position:fixed;
-        top:70px;
+        top:20px;
         bottom:0;
         right:0;
-        left:215px;
+        left:0;
         padding:5px;
-        min-width:778px;
+        /*min-width:778px;*/
         overflow:auto;
     }
     #contentBackoffice {
@@ -120,9 +119,9 @@
         top:140px;
         bottom:0;
         right:0;
-        left:215px;
+        left:0;
         padding:5px;
-        min-width:778px;
+        /*min-width:778px;*/
         overflow:auto;
     }
     .backoffice50 {
@@ -137,7 +136,7 @@
         right:0;
         left:0;
         padding:10px;
-        min-width:400px;
+        /*min-width:400px;*/
         overflow:auto;
     }
 
@@ -150,7 +149,7 @@
     }
     body.popup #content {
         left: 0px;
-        top:112px;
+        /*top:112px;*/
     }
 
     /* -------------------------------------------------------------------------------------
@@ -855,7 +854,7 @@
 
 /* columns */
     .columns  {
-        min-width:975px;
+        /*min-width:975px;*/
     }
 
 /* flexible cols */
