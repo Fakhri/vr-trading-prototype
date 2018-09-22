@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>three.js css3d - panorama</title>
+		<title>F10 Team #29</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -48,7 +48,7 @@
 		<script src="js/DeviceOrientationControls.js"></script>
 		<script src="js/CSS3DStereoRenderer.js"></script>
 
-		<div id="info">Mobile/VR Prototype - Team #29 - F10</div>
+		<!-- <div id="info">VR Prototype - Team #29 - F10</div> -->
 
         <div id="container"></div>
 		<div id="blocker"></div>
@@ -64,11 +64,9 @@
 			var phi = 0, theta = 0;
 
             var touchX, touchY;
-
-			var width = '400px';
-			var height = '300px';
+			
 			var touchX, touchY;
-			var Element = function ( x, y, z, ry ) {
+			var Element = function ( x, y, z, ry, width, height, url) {
 				var div = document.createElement( 'div' );
 				div.style.width = width;
 				div.style.height = height;
@@ -78,7 +76,7 @@
 				iframe.style.width = width;
 				iframe.style.height = height;
 				iframe.style.border = '0px';
-				iframe.src = '../frontend';
+				iframe.src = url;
 				div.appendChild( iframe );
 				var object = new THREE.CSS3DObject( div );
 				object.position.set( x, y, z );
@@ -105,37 +103,39 @@
 
                 scene = new THREE.Scene();
 
-                background = "night"
+				background = "night"
+				
+				var screenDist = 600;
 
 				var sides = [
 					{
 						url: 'assets/image/' + background + '/px.jpg',
-						position: [ -512, 0, 0 ],
+						position: [ -screenDist, 0, 0 ],
 						rotation: [ 0, Math.PI / 2, 0 ]
 					},
 					{
 						url: 'assets/image/' + background + '/nx.jpg',
-						position: [ 512, 0, 0 ],
+						position: [ screenDist, 0, 0 ],
 						rotation: [ 0, -Math.PI / 2, 0 ]
 					},
 					{
 						url: 'assets/image/' + background + '/py.jpg',
-						position: [ 0,  512, 0 ],
+						position: [ 0,  screenDist, 0 ],
 						rotation: [ Math.PI / 2, 0, Math.PI ]
 					},
 					{
 						url: 'assets/image/' + background + '/ny.jpg',
-						position: [ 0, -512, 0 ],
+						position: [ 0, -screenDist, 0 ],
 						rotation: [ - Math.PI / 2, 0, Math.PI ]
 					},
 					{
 						url: 'assets/image/' + background + '/pz.jpg',
-						position: [ 0, 0,  512 ],
+						position: [ 0, 0,  screenDist ],
 						rotation: [ 0, Math.PI, 0 ]
 					},
 					{
 						url: 'assets/image/' + background + '/nz.jpg',
-						position: [ 0, 0, -512 ],
+						position: [ 0, 0, -screenDist ],
 						rotation: [ 0, 0, 0 ]
 					}
 				];
@@ -145,7 +145,7 @@
 					var side = sides[ i ];
 
 					var element = document.createElement( 'img' );
-					element.width = 1026; // 2 pixels extra to close the gap.
+					element.width = screenDist * 2 + 2; // 2 pixels extra to close the gap.
 					element.src = side.url;
 
 					var object = new THREE.CSS3DObject( element );
@@ -162,9 +162,18 @@
 
 				//add window
 				var group = new THREE.Group();
-				group.add( new Element( 500, 0, 0, - Math.PI / 2 ) );
-				group.add( new Element( 350, 0, 350, - Math.PI * 3 / 4 ) );
-				group.add( new Element( 350, 0, -350, - Math.PI / 4 ) );
+				group.add( new Element( 500, 0, 0, - Math.PI / 2, 
+					'480px', '360px', 
+					'http://www.tkfweb.com/idhtml/screens/overview.jsp') );
+				group.add( new Element( 300, 0, 400, - Math.PI * 3 / 4,
+					'240px', '170px',
+					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
+				group.add( new Element( 300, 185, 400, - Math.PI * 3 / 4,
+					'240px', '170px',
+					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
+				group.add( new Element( 300, 0, -400, - Math.PI / 4,
+					'480px', '360px',
+					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
 				scene.add( group );
 				window.addEventListener( 'resize', onWindowResize, false );
 
@@ -288,7 +297,7 @@
                     document.webkitExitFullscreen();
                     isFullscreen = false;
                 }
-            } );
+			} );
 		</script>
 	</body>
 </html>
