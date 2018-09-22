@@ -48,7 +48,7 @@
 		<script src="js/DeviceOrientationControls.js"></script>
 		<script src="js/CSS3DRenderer.js"></script>
 
-		<div id="info">Mobile/VR Prototype - Team #29 - F10</div>
+		<div id="info">Desktop Prototype - Team #29 - F10</div>
 
         <div id="container"></div>
 		<div id="blocker"></div>
@@ -65,16 +65,18 @@
 
             var touchX, touchY;
 
+			var width = '400px';
+			var height = '300px';
 			var touchX, touchY;
 			var Element = function ( x, y, z, ry ) {
 				var div = document.createElement( 'div' );
-				div.style.width = '800px';
-				div.style.height = '600px';
+				div.style.width = width;
+				div.style.height = height;
 				div.style.backgroundColor = '#000';
 				div.style.overflow= 'hidden';
 				var iframe = document.createElement( 'iframe' );
-				iframe.style.width = '800px';
-				iframe.style.height = '600px';
+				iframe.style.width = width;
+				iframe.style.height = height;
 				iframe.style.border = '0px';
 				iframe.src = '../frontend';
 				div.appendChild( iframe );
@@ -97,7 +99,7 @@
 
 			function init() {
 
-                camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1000 );
+                camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 0 );
 
                 controls = new THREE.DeviceOrientationControls( camera );
 
@@ -160,9 +162,9 @@
 
 				//add window
 				var group = new THREE.Group();
-				group.add( new Element( 0, 0, 500, 3.142 ) );
-				// group.add( new Element( 740, 0, 740, 3.842 ) );
-				// group.add( new Element( -740, 0, 740, 2.442 ) );
+				group.add( new Element( 500, 0, 0, - Math.PI / 2 ) );
+				group.add( new Element( 350, 0, 350, - Math.PI * 3 / 4 ) );
+				group.add( new Element( 350, 0, -350, - Math.PI / 4 ) );
 				scene.add( group );
 				window.addEventListener( 'resize', onWindowResize, false );
 
