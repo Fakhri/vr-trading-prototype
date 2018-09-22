@@ -106,7 +106,7 @@
     }
     #content {
         position:fixed;
-        top:20px;
+        top:2px;
         bottom:0;
         right:0;
         left:0;
@@ -422,7 +422,7 @@
         padding:1px 4px 1px 4px;
     }
     table.data_small th, table.data_small td {
-        font-size:12px;
+        font-size:8px;
         padding:0 4px;
     }
     table.tabular th, table.tabular td, .table th {
