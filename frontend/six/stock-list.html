@@ -1,0 +1,1829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0048)http://www.tkfweb.com/idhtml/screens/display.jsp -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="gr__tkfweb_com"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- decorator: main -->
+<script type="text/javascript" language="JavaScript">
+<!--
+var updateInterval = 0;
+//-->
+</script>
+<title>SIX iD HTML</title>
+
+<meta http-equiv="Refresh" content="300; URL=http://www.tkfweb.com/idhtml/screens/display.jsp">
+<!-- javascript -->
+<script type="text/javascript" language="JavaScript" src="stock-list-files/telekurs_full.min.js" id="telekurs_full"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery-1.5.2.min.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery-ui-1.8.4.custom.min.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.cookie.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.fieldenhancer.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.dropdown.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.toggler.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.contextmenu.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.pull.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.multiselectrow.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.bgiframe.min.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/jquery.editable-select.pack.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/telekurs.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/telekurs_util.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/shortcuts.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/general.js"></script><script type="text/javascript" language="JavaScript" src="stock-list-files/actions.js"></script>
+<!-- style -->
+<link href="stock-list-files/telekurs.min.css" rel="stylesheet" type="text/css">
+<!--[if IE]>
+<link href="/idhtml/style/browser/ie_all.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+<!--[if IE 7]>
+<link href="/idhtml/style/browser/ie_7.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+<!--[if IE 6]>
+<link href="/idhtml/style/browser/ie_6.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+<!-- 2009, Interaction Design by Nose AG Design Intelligence, Hardturmstrasse 171, 8005 Zuerich, www.nose.ch -->
+<link rel="icon" href="http://www.tkfweb.com/idhtml/images/favicon_16.png">
+</head>
+<body data-gr-c-s-loaded="true">
+<div id="heatmapHints"><!-- --></div>
+<div id="container">
+<!-- begin: main -->
+<div id="main">
+<h1 id="tabTitle">USA</h1>
+<div id="content">
+<span id="hiddenTitle" class="hiddenTitle">USA</span>
+<div class="columns" id="chartContent">
+<!-- begin: columns -->
+<div class="columns">
+<!-- begin: col50 -->
+<div class="col50">
+<!-- begin: box -->
+<div class="box mright">
+<!-- box title -->
+<div class="box_title"><h3>DJ INDU Index Stocks</h3></div>
+<!-- box content -->
+<div class="box_content">
+<!-- USED FOR THE ALIGNMENT -->
+<script type="text/javascript">
+var listName = "NYSE.DJ INDU Index Stocks";
+var owner = "TK";
+</script>
+
+<script language="JavaScript" type="text/javascript">
+var contextMenu;
+var moveSelection;
+var rowIndexes;
+jQuery(document).ready(function(){
+var window_id=null;
+var insert_before = "Insert listing(s) before";
+var insert_after = "Insert listing(s) after";
+contextMenu= $('#contextMenu').contextmenu({'width':200});
+contextMenu.addElement("Details",function(e) {
+window_id = window.open("/idhtml/detail/overview_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+// window_id = window.open("/idhtml/detail/overview_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=yes, toolbar=yes, menubar=yes, location=yes, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Derivatives",function(e) {
+window_id = window.open("/idhtml/detail/derivative_red.jsp?sc=M&cp=*&derivative_type=warrants&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Option Calculator",function(e) {
+window_id = window.open("/idhtml/calculator/calculator_red.jsp?listing=" + listingNr, "calculator", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("All sources",function(e) {
+window_id = window.open("/idhtml/detail/arbitrage_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Year chart",function(e) {
+window_id = window.open("/idhtml/detail/chart_red.jsp?PERIOD=year1&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Intraday chart",function(e) {
+window_id = window.open("/idhtml/detail/chart_red.jsp?PERIOD=avail&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Timeseries",function(e) {
+window_id = window.open("/idhtml/detail/timesales_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Instrument summary",function(e) {
+window_id = window.open("/idhtml/detail/vdb_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("News",function(e) {
+window_id = window.open("/idhtml/detail/news_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addSplitter();
+contextMenu.addElement("Analysis",function(e) {
+window_id = window.open("/idhtml/analysis/analyse_red.jsp?listing=" + listingNr, "analysis", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Documents",function(e) {
+window_id = window.open("/idhtml/detail/tms_news_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addSplitter();
+contextMenu.addElement("Add to list",function(e) {
+toUserpage('323600,13,814');
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Add to portfolio",function(e) {
+toPortfolio();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Add limit",function(e) {
+toLimit();
+contextMenu.trigger("close");
+});
+contextMenu.addSplitter();
+contextMenu.addElement("Close menu",function() {contextMenu.trigger("close");},1);
+});
+</script>
+<table id="list" cellspacing="0" class="data hoverable zebra multiselect">
+<thead>
+<tr class="header list_color1">
+<th title="Name" align="left" onclick="document.location=&#39;overview.jsp?screen=overview3&amp;screen_order=asc&amp;screen_sort=M-1-v&#39;">
+Name
+</th>
+<th title="Trend Val/P-Val (adjusted)" align="center" onclick="document.location=&#39;overview.jsp?screen=overview3&amp;screen_order=asc&amp;screen_sort=P-33,539,1-v&#39;">
+T(adj)
+</th>
+<th title="Most Recent Valuation Price" align="right" onclick="document.location=&#39;overview.jsp?screen=overview3&amp;screen_order=asc&amp;screen_sort=P-12,0,0-v&#39;">
+LVal
+</th>
+<th title="Net Change Last/Close (unadjusted)" align="right" onclick="document.location=&#39;overview.jsp?screen=overview3&amp;screen_order=asc&amp;screen_sort=P-33,507,1-v&#39;">
+Net L/C
+</th>
+<th title="% Change Last/Close (unadjusted)" align="right" onclick="document.location=&#39;overview.jsp?screen=overview3&amp;screen_order=asc&amp;screen_sort=P-33,508,1-v&#39;">
+Net L/C%
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="list_color1" id="998313,310,333" onclick="showContextMenu(&#39;998313,310,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;998313,310,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachenf3e2c94">DJ Industr Average</span>
+</td>
+<td height="20" align="center">
+<span class="nf3e2c19a" id="pullCachenf3e2c19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachenf3e2c125">26,743.5</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachenf3e2c195">86.52</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachenf3e2c196">+0.32%</span>
+</td>
+</tr>
+<tr class="list_color2" id="1405105,65,333" onclick="showContextMenu(&#39;1405105,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1405105,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen15723f94">3M Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n15723f19a" id="pullCachen15723f19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen15723f125">216.33</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen15723f195">1.06</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen15723f196">+0.49%</span>
+</td>
+</tr>
+<tr class="list_color1" id="906153,65,333" onclick="showContextMenu(&#39;906153,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;906153,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachendd53794">American Express Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ndd53719a" id="pullCachendd53719a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachendd537125">110.9</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachendd537195">-0.21</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachendd537196">-0.19%</span>
+</td>
+</tr>
+<tr class="list_color2" id="908440,67,333" onclick="showContextMenu(&#39;908440,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;908440,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachendde2894">Apple Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ndde2819a" id="pullCachendde2819a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachendde28125">217.66</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachendde28195">-2.37</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachendde28196">-1.08%</span>
+</td>
+</tr>
+<tr class="list_color1" id="913253,65,333" onclick="showContextMenu(&#39;913253,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;913253,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachendf0f394">Boeing Co Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ndf0f319a" id="pullCachendf0f319a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachendf0f3125">372.23</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachendf0f3195">4.77</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachendf0f3196">+1.3%</span>
+</td>
+</tr>
+<tr class="list_color2" id="916546,65,333" onclick="showContextMenu(&#39;916546,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;916546,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachendfdd094">Caterpillar Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ndfdd019a" id="pullCachendfdd019a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachendfdd0125">156.38</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachendfdd0195">0.38</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachendfdd0196">+0.24%</span>
+</td>
+</tr>
+<tr class="list_color1" id="1281709,65,333" onclick="showContextMenu(&#39;1281709,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1281709,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen13903b94">Chevron Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n13903b19a" id="pullCachen13903b19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen13903b125">121.13</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen13903b195">1.71</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen13903b196">+1.43%</span>
+</td>
+</tr>
+<tr class="list_color2" id="918546,67,333" onclick="showContextMenu(&#39;918546,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;918546,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene05a294">Cisco Systems Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne05a219a" id="pullCachene05a219a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene05a2125">48.56</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene05a2195">0.83</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene05a2196">+1.74%</span>
+</td>
+</tr>
+<tr class="list_color1" id="919390,65,333" onclick="showContextMenu(&#39;919390,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;919390,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene08ec94">Coca-Cola Co Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne08ec19a" id="pullCachene08ec19a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene08ec125">46.58</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachene08ec195">-0.06</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachene08ec196">-0.13%</span>
+</td>
+</tr>
+<tr class="list_color2" id="37575522,65,333" onclick="showContextMenu(&#39;37575522,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;37575522,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen23d5cf094">DowDuPont Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n23d5cf019a" id="pullCachen23d5cf019a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen23d5cf0125">69.69</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachen23d5cf0195">-0.34</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachen23d5cf0196">-0.49%</span>
+</td>
+</tr>
+<tr class="list_color1" id="808963,65,333" onclick="showContextMenu(&#39;808963,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;808963,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachenc599194">Exxon Mobil Rg</span>
+</td>
+<td height="20" align="center">
+<span class="nc599119a" id="pullCachenc599119a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachenc5991125">85.17</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachenc5991195">0.35</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachenc5991196">+0.41%</span>
+</td>
+</tr>
+<tr class="list_color2" id="714968,65,333" onclick="showContextMenu(&#39;714968,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;714968,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachenaea6694">Goldman Sachs Gr Rg</span>
+</td>
+<td height="20" align="center">
+<span class="naea6619a" id="pullCachenaea6619a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachenaea66125">235.34</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachenaea66195">-2.06</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachenaea66196">-0.87%</span>
+</td>
+</tr>
+<tr class="list_color1" id="939360,65,333" onclick="showContextMenu(&#39;939360,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;939360,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene56ee94">Home Depot Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne56ee19a" id="pullCachene56ee19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene56ee125">212.39</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene56ee195">1.33</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene56ee196">+0.63%</span>
+</td>
+</tr>
+<tr class="list_color2" id="941800,65,333" onclick="showContextMenu(&#39;941800,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;941800,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene607694">IBM Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne607619a" id="pullCachene607619a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene6076125">151.35</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene6076195">0.2</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene6076196">+0.13%</span>
+</td>
+</tr>
+<tr class="list_color1" id="941595,67,333" onclick="showContextMenu(&#39;941595,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;941595,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene5fab94">Intel Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne5fab19a" id="pullCachene5fab19a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene5fab125">46.66</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachene5fab195">-0.54</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachene5fab196">-1.14%</span>
+</td>
+</tr>
+<tr class="list_color2" id="943981,65,333" onclick="showContextMenu(&#39;943981,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;943981,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene68fb94">Johnson &amp; Johnso Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne68fb19a" id="pullCachene68fb19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene68fb125">142.88</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene68fb195">0.9</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene68fb196">+0.63%</span>
+</td>
+</tr>
+<tr class="list_color1" id="1161460,65,333" onclick="showContextMenu(&#39;1161460,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1161460,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen11ba8294">JPMorgan Chase Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n11ba8219a" id="pullCachen11ba8219a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen11ba82125">117.85</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachen11ba82195">-0.78</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachen11ba82196">-0.66%</span>
+</td>
+</tr>
+<tr class="list_color2" id="950605,65,333" onclick="showContextMenu(&#39;950605,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;950605,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene82db94">McDonald's Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne82db19a" id="pullCachene82db19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene82db125">165.3</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene82db195">4.51</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene82db196">+2.8%</span>
+</td>
+</tr>
+<tr class="list_color1" id="10683053,65,333" onclick="showContextMenu(&#39;10683053,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;10683053,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachena3043b94">Merck Rg</span>
+</td>
+<td height="20" align="center">
+<span class="na3043b19a" id="pullCachena3043b19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachena3043b125">71.1</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachena3043b195">0.32</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachena3043b196">+0.45%</span>
+</td>
+</tr>
+<tr class="list_color2" id="951692,67,333" onclick="showContextMenu(&#39;951692,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;951692,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene871c94">Microsoft Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne871c19a" id="pullCachene871c19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene871c125">114.26</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene871c195">0.69</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene871c196">+0.61%</span>
+</td>
+</tr>
+<tr class="list_color1" id="957150,65,333" onclick="showContextMenu(&#39;957150,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;957150,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachene9c6c94">Nike -B-</span>
+</td>
+<td height="20" align="center">
+<span class="ne9c6c19a" id="pullCachene9c6c19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachene9c6c125">85.55</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene9c6c195">0.18</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachene9c6c196">+0.21%</span>
+</td>
+</tr>
+<tr class="list_color2" id="962004,65,333" onclick="showContextMenu(&#39;962004,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;962004,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCacheneaf6294">Pfizer Rg</span>
+</td>
+<td height="20" align="center">
+<span class="neaf6219a" id="pullCacheneaf6219a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCacheneaf62125">44.06</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCacheneaf62195">0.31</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCacheneaf62196">+0.71%</span>
+</td>
+</tr>
+<tr class="list_color1" id="963896,65,333" onclick="showContextMenu(&#39;963896,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;963896,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCacheneb6c694">Procter&amp;Gamble Rg</span>
+</td>
+<td height="20" align="center">
+<span class="neb6c619a" id="pullCacheneb6c619a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCacheneb6c6125">85.82</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCacheneb6c6195">0.46</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCacheneb6c6196">+0.54%</span>
+</td>
+</tr>
+<tr class="list_color2" id="2959439,65,333" onclick="showContextMenu(&#39;2959439,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;2959439,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen2d29dd94">Travelers Cos Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n2d29dd19a" id="pullCachen2d29dd19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen2d29dd125">134.44</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen2d29dd195">0.29</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen2d29dd196">+0.22%</span>
+</td>
+</tr>
+<tr class="list_color1" id="1078451,65,333" onclick="showContextMenu(&#39;1078451,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1078451,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen10764194">Unitedhealth Gro Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n10764119a" id="pullCachen10764119a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen107641125">266.67</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen107641195">0.28</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen107641196">+0.11%</span>
+</td>
+</tr>
+<tr class="list_color2" id="980943,65,333" onclick="showContextMenu(&#39;980943,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;980943,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachenef95d94">Utd Techs Rg</span>
+</td>
+<td height="20" align="center">
+<span class="nef95d19a" id="pullCachenef95d19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachenef95d125">142.08</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachenef95d195">0.23</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachenef95d196">+0.16%</span>
+</td>
+</tr>
+<tr class="list_color1" id="1095642,65,333" onclick="showContextMenu(&#39;1095642,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1095642,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen10b96894">Verizon Comm Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n10b96819a" id="pullCachen10b96819a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen10b968125">54.42</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen10b968195">0.47</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen10b968196">+0.87%</span>
+</td>
+</tr>
+<tr class="list_color2" id="3826452,65,333" onclick="showContextMenu(&#39;3826452,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;3826452,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen3a64a294">Visa Rg-A</span>
+</td>
+<td height="20" align="center">
+<span class="n3a64a219a" id="pullCachen3a64a219a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen3a64a2125">150.05</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen3a64a2195">0.81</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen3a64a2196">+0.54%</span>
+</td>
+</tr>
+<tr class="list_color1" id="26526295,67,333" onclick="showContextMenu(&#39;26526295,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;26526295,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachen194c3e794">Walgreens Boots Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n194c3e719a" id="pullCachen194c3e719a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachen194c3e7125">73</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen194c3e7195">0.11</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachen194c3e7196">+0.15%</span>
+</td>
+</tr>
+<tr class="list_color2" id="984101,65,333" onclick="showContextMenu(&#39;984101,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;984101,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachenf05b394">Walmart Rg</span>
+</td>
+<td height="20" align="center">
+<span class="nf05b319a" id="pullCachenf05b319a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachenf05b3125">95.9</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachenf05b3195">0.15</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="pullCachenf05b3196">+0.16%</span>
+</td>
+</tr>
+<tr class="list_color1" id="984192,65,333" onclick="showContextMenu(&#39;984192,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;984192,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="pullCachenf060e94">Walt Disney Rg-Dis</span>
+</td>
+<td height="20" align="center">
+<span class="nf060e19a" id="pullCachenf060e19a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="pullCachenf060e125">110.4</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachenf060e195">-1.22</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="pullCachenf060e196">-1.09%</span>
+</td>
+</tr>
+</tbody>
+</table>
+<script type="text/javascript">
+var e_m = {};
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "0";
+e_a[2] = "0";
+e_a[3] = "0";
+e_a[4] = "1";
+e_m["998313,310,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1405105,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["906153,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["908440,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["913253,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["916546,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1281709,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["918546,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["919390,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["37575522,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["808963,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["714968,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["939360,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["941800,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["941595,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["943981,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1161460,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["950605,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["10683053,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["951692,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["957150,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["962004,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["963896,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["2959439,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1078451,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["980943,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1095642,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["3826452,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["26526295,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["984101,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["984192,65,333"] = e_a;
+</script>
+<script type="text/javascript">
+function disableContextMenu() {
+contextMenu.trigger("disableItem",new Array('Details'));
+contextMenu.trigger("disableItem",new Array('News'));
+contextMenu.trigger("disableItem",new Array('Derivatives'));
+contextMenu.trigger("disableItem",new Array('Year chart'));
+contextMenu.trigger("disableItem",new Array('chart_intraday'));
+contextMenu.trigger("disableItem",new Array('Timeseries'));
+contextMenu.trigger("disableItem",new Array('Add listing'));
+contextMenu.trigger("disableItem",new Array('Add to list'));
+contextMenu.trigger("disableItem",new Array('Add to portfolio'));
+contextMenu.trigger("disableItem",new Array('add_limit'));
+contextMenu.trigger("disableItem",new Array('Documents'));
+}
+</script>
+<!-- end: box content -->
+</div>
+<!-- end: box title -->
+</div>
+<!-- end: col50 -->
+</div>
+<!-- begin: col50 -->
+<div class="col50">
+<script type="text/javascript">
+var listName = "NYSE.DJ INDU Index Stocks";
+var owner = "TK";
+</script>
+
+<script language="JavaScript" type="text/javascript">
+var contextMenu;
+var moveSelection;
+var rowIndexes;
+jQuery(document).ready(function(){
+var window_id=null;
+var insert_before = "Insert listing(s) before";
+var insert_after = "Insert listing(s) after";
+contextMenu= $('#contextMenu').contextmenu({'width':200});
+contextMenu.addElement("Details",function(e) {
+window_id = window.open("/idhtml/detail/overview_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+// window_id = window.open("/idhtml/detail/overview_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=yes, toolbar=yes, menubar=yes, location=yes, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Derivatives",function(e) {
+window_id = window.open("/idhtml/detail/derivative_red.jsp?sc=M&cp=*&derivative_type=warrants&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Option Calculator",function(e) {
+window_id = window.open("/idhtml/calculator/calculator_red.jsp?listing=" + listingNr, "calculator", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("All sources",function(e) {
+window_id = window.open("/idhtml/detail/arbitrage_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Year chart",function(e) {
+window_id = window.open("/idhtml/detail/chart_red.jsp?PERIOD=year1&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Intraday chart",function(e) {
+window_id = window.open("/idhtml/detail/chart_red.jsp?PERIOD=avail&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Timeseries",function(e) {
+window_id = window.open("/idhtml/detail/timesales_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Instrument summary",function(e) {
+window_id = window.open("/idhtml/detail/vdb_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("News",function(e) {
+window_id = window.open("/idhtml/detail/news_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addSplitter();
+contextMenu.addElement("Analysis",function(e) {
+window_id = window.open("/idhtml/analysis/analyse_red.jsp?listing=" + listingNr, "analysis", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Documents",function(e) {
+window_id = window.open("/idhtml/detail/tms_news_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+window_id.focus();
+contextMenu.trigger("close");
+});
+contextMenu.addSplitter();
+contextMenu.addElement("Add to list",function(e) {
+toUserpage('323600,13,814');
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Add to portfolio",function(e) {
+toPortfolio();
+contextMenu.trigger("close");
+});
+contextMenu.addElement("Add limit",function(e) {
+toLimit();
+contextMenu.trigger("close");
+});
+contextMenu.addSplitter();
+contextMenu.addElement("Close menu",function() {contextMenu.trigger("close");},1);
+});
+</script>
+<!-- begin: box -->
+<div class="box">
+<!-- box title -->
+<div class="box_title"><h3>Winner</h3></div>
+<!-- box content -->
+<div class="box_content">
+<table id="winnerlist" cellspacing="0" class="data hoverable zebra multiselect">
+<thead>
+<tr class="header list_color1" style="cursor:auto;">
+<th title="Name" align="left" nowrap="nowrap">&nbsp;Name</th>
+<th title="Trend Val/P-Val (adjusted)" align="center" nowrap="nowrap">&nbsp;T(adj)</th>
+<th title="Most Recent Valuation Price" align="right" nowrap="nowrap">&nbsp;LVal</th>
+<th title="Net Change Last/Close (unadjusted)" align="right" nowrap="nowrap">&nbsp;Net L/C</th>
+<th title="% Change Last/Close (unadjusted)" align="right" nowrap="nowrap">&nbsp;Net L/C%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="list_color1" id="950605,65,333" onclick="showContextMenu(&#39;950605,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;950605,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene82db94">McDonald's Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachene82db19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene82db125">165.3</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene82db195">4.51</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene82db196">+2.8%</span>
+</td>
+</tr>
+<tr class="list_color2" id="918546,67,333" onclick="showContextMenu(&#39;918546,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;918546,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene05a294">Cisco Systems Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachene05a219a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene05a2125">48.56</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene05a2195">0.83</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene05a2196">+1.74%</span>
+</td>
+</tr>
+<tr class="list_color1" id="1281709,65,333" onclick="showContextMenu(&#39;1281709,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1281709,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen13903b94">Chevron Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachen13903b19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen13903b125">121.13</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen13903b195">1.71</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen13903b196">+1.43%</span>
+</td>
+</tr>
+<tr class="list_color2" id="913253,65,333" onclick="showContextMenu(&#39;913253,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;913253,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachendf0f394">Boeing Co Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachendf0f319a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachendf0f3125">372.23</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachendf0f3195">4.77</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachendf0f3196">+1.3%</span>
+</td>
+</tr>
+<tr class="list_color1" id="1095642,65,333" onclick="showContextMenu(&#39;1095642,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1095642,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen10b96894">Verizon Comm Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachen10b96819a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen10b968125">54.42</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen10b968195">0.47</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen10b968196">+0.87%</span>
+</td>
+</tr>
+<tr class="list_color2" id="962004,65,333" onclick="showContextMenu(&#39;962004,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;962004,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCacheneaf6294">Pfizer Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCacheneaf6219a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCacheneaf62125">44.06</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCacheneaf62195">0.31</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCacheneaf62196">+0.71%</span>
+</td>
+</tr>
+<tr class="list_color1" id="939360,65,333" onclick="showContextMenu(&#39;939360,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;939360,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene56ee94">Home Depot Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachene56ee19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene56ee125">212.39</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene56ee195">1.33</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene56ee196">+0.63%</span>
+</td>
+</tr>
+<tr class="list_color2" id="943981,65,333" onclick="showContextMenu(&#39;943981,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;943981,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene68fb94">Johnson &amp; Johnso Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachene68fb19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene68fb125">142.88</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene68fb195">0.9</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene68fb196">+0.63%</span>
+</td>
+</tr>
+<tr class="list_color1" id="951692,67,333" onclick="showContextMenu(&#39;951692,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;951692,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene871c94">Microsoft Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachene871c19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene871c125">114.26</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene871c195">0.69</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene871c196">+0.61%</span>
+</td>
+</tr>
+<tr class="list_color2" id="963896,65,333" onclick="showContextMenu(&#39;963896,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;963896,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCacheneb6c694">Procter&amp;Gamble Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCacheneb6c619a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCacheneb6c6125">85.82</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCacheneb6c6195">0.46</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCacheneb6c6196">+0.54%</span>
+</td>
+</tr>
+<tr class="list_color1" id="3826452,65,333" onclick="showContextMenu(&#39;3826452,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;3826452,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen3a64a294">Visa Rg-A</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachen3a64a219a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen3a64a2125">150.05</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen3a64a2195">0.81</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen3a64a2196">+0.54%</span>
+</td>
+</tr>
+<tr class="list_color2" id="1405105,65,333" onclick="showContextMenu(&#39;1405105,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1405105,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen15723f94">3M Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachen15723f19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen15723f125">216.33</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen15723f195">1.06</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen15723f196">+0.49%</span>
+</td>
+</tr>
+<tr class="list_color1" id="10683053,65,333" onclick="showContextMenu(&#39;10683053,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;10683053,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachena3043b94">Merck Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachena3043b19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachena3043b125">71.1</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachena3043b195">0.32</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachena3043b196">+0.45%</span>
+</td>
+</tr>
+<tr class="list_color2" id="808963,65,333" onclick="showContextMenu(&#39;808963,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;808963,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachenc599194">Exxon Mobil Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachenc599119a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachenc5991125">85.17</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachenc5991195">0.35</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachenc5991196">+0.41%</span>
+</td>
+</tr>
+<tr class="list_color1" id="998313,310,333" onclick="showContextMenu(&#39;998313,310,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;998313,310,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachenf3e2c94">DJ Industr Average</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachenf3e2c19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachenf3e2c125">26,743.5</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachenf3e2c195">86.52</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachenf3e2c196">+0.32%</span>
+</td>
+</tr>
+<tr class="list_color2" id="916546,65,333" onclick="showContextMenu(&#39;916546,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;916546,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachendfdd094">Caterpillar Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachendfdd019a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachendfdd0125">156.38</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachendfdd0195">0.38</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachendfdd0196">+0.24%</span>
+</td>
+</tr>
+<tr class="list_color1" id="2959439,65,333" onclick="showContextMenu(&#39;2959439,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;2959439,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen2d29dd94">Travelers Cos Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachen2d29dd19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen2d29dd125">134.44</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen2d29dd195">0.29</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen2d29dd196">+0.22%</span>
+</td>
+</tr>
+<tr class="list_color2" id="957150,65,333" onclick="showContextMenu(&#39;957150,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;957150,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene9c6c94">Nike -B-</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachene9c6c19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene9c6c125">85.55</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene9c6c195">0.18</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene9c6c196">+0.21%</span>
+</td>
+</tr>
+<tr class="list_color1" id="980943,65,333" onclick="showContextMenu(&#39;980943,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;980943,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachenef95d94">Utd Techs Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachenef95d19a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachenef95d125">142.08</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachenef95d195">0.23</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachenef95d196">+0.16%</span>
+</td>
+</tr>
+<tr class="list_color2" id="984101,65,333" onclick="showContextMenu(&#39;984101,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;984101,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachenf05b394">Walmart Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachenf05b319a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachenf05b3125">95.9</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachenf05b3195">0.15</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachenf05b3196">+0.16%</span>
+</td>
+</tr>
+<tr class="list_color1" id="26526295,67,333" onclick="showContextMenu(&#39;26526295,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;26526295,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen194c3e794">Walgreens Boots Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachen194c3e719a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen194c3e7125">73</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen194c3e7195">0.11</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen194c3e7196">+0.15%</span>
+</td>
+</tr>
+<tr class="list_color2" id="941800,65,333" onclick="showContextMenu(&#39;941800,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;941800,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene607694">IBM Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachene607619a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene6076125">151.35</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene6076195">0.2</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachene6076196">+0.13%</span>
+</td>
+</tr>
+<tr class="list_color1" id="1078451,65,333" onclick="showContextMenu(&#39;1078451,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1078451,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen10764194">Unitedhealth Gro Rg</span>
+</td>
+<td height="20" align="center">
+<span id="winnerLooserCachen10764119a"><img src="stock-list-files/Trend1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen107641125">266.67</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen107641195">0.28</span>
+</td>
+<td height="20" align="right">
+<span title="" class="more" id="winnerLooserCachen107641196">+0.11%</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<!-- begin: box -->
+<div class="box">
+<!-- box title -->
+<div class="box_title"><h3>Loser</h3></div>
+<!-- box content -->
+<div class="box_content">
+<table id="looserlist" cellspacing="0" class="data hoverable zebra multiselect">
+<thead>
+<tr class="header list_color1" style="cursor:auto;">
+<th title="Name" align="left" nowrap="nowrap">&nbsp;Name</th>
+<th title="Trend Val/P-Val (adjusted)" align="center" nowrap="nowrap">&nbsp;T(adj)</th>
+<th title="Most Recent Valuation Price" align="right" nowrap="nowrap">&nbsp;LVal</th>
+<th title="Net Change Last/Close (unadjusted)" align="right" nowrap="nowrap">&nbsp;Net L/C</th>
+<th title="% Change Last/Close (unadjusted)" align="right" nowrap="nowrap">&nbsp;Net L/C%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="list_color1" id="s941595_67_333" onclick="showContextMenu(&#39;941595,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;941595,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene5fab94">Intel Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne5fab19a" id="winnerLooserCachene5fab19a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene5fab125">46.66</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachene5fab195">-0.54</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachene5fab196">-1.14%</span>
+</td>
+</tr>
+<tr class="list_color2" id="s984192_65_333" onclick="showContextMenu(&#39;984192,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;984192,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachenf060e94">Walt Disney Rg-Dis</span>
+</td>
+<td height="20" align="center">
+<span class="nf060e19a" id="winnerLooserCachenf060e19a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachenf060e125">110.4</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachenf060e195">-1.22</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachenf060e196">-1.09%</span>
+</td>
+</tr>
+<tr class="list_color1" id="s908440_67_333" onclick="showContextMenu(&#39;908440,67,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;908440,67,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachendde2894">Apple Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ndde2819a" id="winnerLooserCachendde2819a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachendde28125">217.66</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachendde28195">-2.37</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachendde28196">-1.08%</span>
+</td>
+</tr>
+<tr class="list_color2" id="s714968_65_333" onclick="showContextMenu(&#39;714968,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;714968,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachenaea6694">Goldman Sachs Gr Rg</span>
+</td>
+<td height="20" align="center">
+<span class="naea6619a" id="winnerLooserCachenaea6619a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachenaea66125">235.34</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachenaea66195">-2.06</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachenaea66196">-0.87%</span>
+</td>
+</tr>
+<tr class="list_color1" id="s1161460_65_333" onclick="showContextMenu(&#39;1161460,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;1161460,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen11ba8294">JPMorgan Chase Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n11ba8219a" id="winnerLooserCachen11ba8219a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen11ba82125">117.85</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachen11ba82195">-0.78</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachen11ba82196">-0.66%</span>
+</td>
+</tr>
+<tr class="list_color2" id="s37575522_65_333" onclick="showContextMenu(&#39;37575522,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;37575522,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachen23d5cf094">DowDuPont Rg</span>
+</td>
+<td height="20" align="center">
+<span class="n23d5cf019a" id="winnerLooserCachen23d5cf019a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachen23d5cf0125">69.69</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachen23d5cf0195">-0.34</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachen23d5cf0196">-0.49%</span>
+</td>
+</tr>
+<tr class="list_color1" id="s906153_65_333" onclick="showContextMenu(&#39;906153,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;906153,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachendd53794">American Express Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ndd53719a" id="winnerLooserCachendd53719a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachendd537125">110.9</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachendd537195">-0.21</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachendd537196">-0.19%</span>
+</td>
+</tr>
+<tr class="list_color2" id="s919390_65_333" onclick="showContextMenu(&#39;919390,65,333&#39;,this,event);" ondblclick="doAction(&#39;detail&#39;, &#39;919390,65,333&#39;)">
+<td height="20" align="left">
+<span title="" class="" id="winnerLooserCachene08ec94">Coca-Cola Co Rg</span>
+</td>
+<td height="20" align="center">
+<span class="ne08ec19a" id="winnerLooserCachene08ec19a"><img src="stock-list-files/Trend-1.png" alt=""></span>
+</td>
+<td height="20" align="right">
+<span title="" class="" id="winnerLooserCachene08ec125">46.58</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachene08ec195">-0.06</span>
+</td>
+<td height="20" align="right">
+<span title="" class="less" id="winnerLooserCachene08ec196">-0.13%</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<script type="text/javascript">
+var e_m = {};
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "0";
+e_a[2] = "0";
+e_a[3] = "0";
+e_a[4] = "1";
+e_m["998313,310,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1405105,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["906153,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["908440,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["913253,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["916546,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1281709,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["918546,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["919390,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["37575522,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["808963,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["714968,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["939360,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["941800,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["941595,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["943981,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1161460,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["950605,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["10683053,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["951692,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["957150,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["962004,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["963896,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["2959439,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1078451,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["980943,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["1095642,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["3826452,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["26526295,67,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["984101,65,333"] = e_a;
+var e_a = new Array(5);
+e_a[0] = "0";
+e_a[1] = "1";
+e_a[2] = "1";
+e_a[3] = "1";
+e_a[4] = "1";
+e_m["984192,65,333"] = e_a;
+</script>
+</div>
+<!-- end: col50 -->
+</div>
+<!-- end: columns -->
+<script type="text/javascript">
+<!--
+var start_path = '/idhtml/jspAction/setProfileValues/idhtml/screens/display.jsp?startScreen=';
+var start_url = 'overview3';
+jQuery(document).ready(function(){
+Telekurs.setTabTitle($("#hiddenTitle").html());
+var chartWidth = parseInt((document.body.offsetWidth - 370) / 3);
+var url = "/idhtml/screens/ajax/charts_content.jsp?chartWidth=" + chartWidth + "&listingId=NYSE.DJ INDU Index Stocks&chartHeight=130&ti1=DJ Industr Average&ti2=NASDAQ Comb Comp&ti3=EUR/USD&c1=998313,310,333&c2=998356,1135,333&c3=946681,148,333&p1=year1bom&p2=year1bom&p3=avail&tp1=1&tp2=1&tp3=0";
+$.get(url, function(response) {
+$("#chartContent").html(response);
+});
+});
+//-->
+</script>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible"></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 3; top: 0px; left: 0px; display: none;"></ul><div id="contextMenu" style="position:absolute;display:none;z-index:1000" class="contextMenu"><!-- --></div><div id="contextMenu" style="position:absolute;display:none;z-index:1000" class="contextMenu"><!-- --></div></body></html>

@@ -1,0 +1,32 @@
+/* filename: jquery.contextmenu.css */
+
+div.contextMenu {
+    border: 1px solid #000;
+}
+
+div.contextmenu_element {
+    padding: 2px;
+    cursor:pointer;
+    cursor:hand;
+    font-size:11px;
+    color:#737780;
+    z-index:105;
+    background:#292a30;
+}
+
+div.contextmenu_splitter {
+    height:1px;
+    padding-left:2px;
+    padding-right:2px;
+    background:#000;
+    font-size:0px;
+    line-height:0px;
+}
+
+div.contextmenu_selected {
+    color: #fff;
+}
+
+div.contextmenu_inactive, div.contextmenu_inactive2 {
+    cursor:auto;
+}

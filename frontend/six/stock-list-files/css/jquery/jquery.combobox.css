@@ -1,0 +1,30 @@
+/* filename: jquery.combobox.css */
+
+img.ui-combobox-arrow {
+    vertical-align: text-bottom;
+    position: relative;
+    top: 0;
+    height: 24px;
+    width: 24px;
+}
+
+* html img.ui-combobox-arrow {
+    top: 0;
+}
+
+.ui-combobox-list {
+    font-size: 10px;
+    border: 1px solid black;
+}
+
+.ui-combobox-list, .ui-combobox-item {
+    display: block;
+    background-color: white;
+}
+
+.ui-combobox-list .selected {
+    background-color: #44454e;
+    cursor: pointer;
+}
+
+

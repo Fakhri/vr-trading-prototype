@@ -1,0 +1,773 @@
+/* filename: elements_extension.css */
+
+@media all {
+    /* -------------------------------------------------------------------------------------
+    TREES
+    ======================================================================================*/
+
+
+/*div.treedisplay */
+    div.treedisplay ul {
+        padding:0 0 15px 0;
+        white-space: nowrap;
+
+    }
+    div.treedisplay ul ul {
+        padding:5px 0 5px 15px;
+    }
+    div.treedisplay ul li {
+        display:block;
+        margin:0 0 3px 0;
+    }
+    div.treedisplay ul li a {
+        font-size:13px;
+        line-height:13px;
+        color:#334455;
+        text-decoration:none;
+        padding:1px 3px 1px 1px;
+    }
+    div.treedisplay ul ul li a  {
+        color:#454545;
+    }
+
+    div.treedisplay li.node img {
+        margin-right:5px;
+        cursor:pointer;
+        cursor:hand;
+    }
+
+    div.treedisplay span {
+        cursor:pointer;
+        cursor:hand;
+    }
+
+/* nodes */
+    div.treedisplay li.node a,
+    div.treedisplay li.open li.node a, div.treedisplay li.open li.node a:hover,
+    div.treedisplay li.open li.open li.node a, div.treedisplay li.open li.open li.node a:hover {
+        /*	padding-left:15px;
+      background-image:url(/idhtml/images/menu/ArrowDown_normal.png);
+      background-position:2px 3px;*/
+        background-repeat:no-repeat;
+        color:#334455;
+    }
+    div.treedisplay li.node a:hover,
+    div.treedisplay li.open li.node a:hover,
+    div.treedisplay li.open li.open li.node a:hover {
+        color:#223344;
+    }
+    div.treedisplay li.open a, div.treedisplay li.open a:hover,
+    div.treedisplay li.open li.open a, div.treedisplay li.open li.open a:hover,
+    div.treedisplay li.open li.open li.open a,div.treedisplay li.open li.open li.open a:hover {
+        /*	background-image:url(/idhtml/images/telekurs/icon_node_open.gif);
+      background-position:1px 4px;*/
+        color:#227799;
+        font-weight:bold;
+    }
+    div.treedisplay li.open li a, div.treedisplay li.open li a:hover,
+    div.treedisplay li.open li.open li a, div.treedisplay li.open li.open li a:hover {
+        font-weight:normal;
+    }
+
+    div.treedisplay li.leaf a, div.treedisplay li.leaf a:hover,
+    div.treedisplay li.open li.leaf a, div.treedisplay li.open li.leaf a:hover,
+    div.treedisplay li.open li.open li.leaf a, div.treedisplay li.open li.open li.leaf a:hover {
+        display:block;
+        padding-left:15px;
+        font-weight:normal;
+        background-image:url(/idhtml/style/img/icon_leaf.gif);
+        background-position:1px 1px;
+        background-repeat:no-repeat;
+        color:#454545;
+        font-weight:normal;
+    }
+
+/* display nodes */
+    div.treedisplay li.node ul,
+    div.treedisplay li.open li.node ul,
+    div.treedisplay li.open li.open li.node ul,
+    div.treedisplay li.open li.open li.open li.node ul {
+        display:none;
+    }
+    div.treedisplay li.open ul,
+    div.treedisplay li.open li.open ul,
+    div.treedisplay li.open li.open li.open ul,
+    div.treedisplay li.open li.open li.open li.open ul {
+        display:block;
+    }
+
+
+/* hover */
+    div.treedisplay li.leaf a:hover,
+    div.treedisplay li.open li.leaf a:hover,
+    div.treedisplay li.open li.open li.leaf a:hover {
+        color:#223344;
+    }
+
+/* selected */
+    div.treedisplay ul li.selected a, div.treedisplay ul li.selected a:hover,
+    div.treedisplay li.selected a, div.treedisplay li.selected a:hover,
+    div.treedisplay li.open li.selected a, div.treedisplay li.open li.selected a:hover,
+    div.treedisplay li.open li.open li.selected a,div.treedisplay li.open li.open li.selected a:hover {
+        color:#FFFFFF;
+        background-color:#227799;
+    }
+
+    div.treedisplay ul li.selected span, div.treedisplay ul li.selected span:hover,
+    div.treedisplay li.selected span, div.treedisplay li.selected span:hover,
+    div.treedisplay li.open li.selected span, div.treedisplay li.open li.selected span:hover,
+    div.treedisplay li.open li.open li.selected span,div.treedisplay li.open li.open li.selected span:hover {
+        color:#FFFFFF;
+        background-color:#227799;
+    }
+
+    div.treedisplay li .hover {
+        color:#fff;
+    }
+
+    li.node_selected span{
+        color:#fff;
+        background-color:#3c3e42;
+    }
+
+    li.node_selected * span{
+        color:#737780;
+        background-color:transparent;
+    }
+
+    /* -------------------------------------------------------------------------------------
+    SUBNAVIGATION
+    ======================================================================================*/
+
+/* tree */
+    #subnavigation ul {
+        padding:0 0 5px 0;
+    }
+    #subnavigation ul ul {
+        padding:5px 0 5px 15px;
+    }
+    #subnavigation ul li {
+        margin:0 0 3px 0;
+        color:#737780;
+    }
+
+    #subnavigation ul li span{
+        white-space: nowrap;
+    }
+
+    #subnavigation ul li a {
+        font-size:13px;
+        line-height:13px;
+        color:#737780;
+        text-decoration:none;
+        padding:1px 3px 1px 1px;
+    }
+    #subnavigation ul ul li a  {
+        color:#737780;
+    }
+
+/* nodes */
+    #subnavigation li.node a,
+    #subnavigation li.open li.node a, #subnavigation li.open li.node a:hover,
+    #subnavigation li.open li.open li.node a, #subnavigation li.open li.open li.node a:hover {
+        padding-left:15px;
+        background-image:url(/idhtml/images/menu/ArrowDown_normal.png);
+        background-position:1px 6px;
+        background-repeat:no-repeat;
+        color:#737780;
+    }
+    #subnavigation li.node a:hover,
+    #subnavigation li.open li.node a:hover,
+    #subnavigation li.open li.open li.node a:hover {
+        color:#fff;
+    }
+    #subnavigation li.open a, #subnavigation li.open a:hover,
+    #subnavigation li.open li.open a, #subnavigation li.open li.open a:hover,
+    #subnavigation li.open li.open li.open a,#subnavigation li.open li.open li.open a:hover {
+        background-image:url(/idhtml/images/menu/ArrowUp_active.png);
+        background-position:1px 6px;
+        color:#fff;
+    }
+    #subnavigation li.open li a, #subnavigation li.open li a:hover,
+    #subnavigation li.open li.open li a, #subnavigation li.open li.open li a:hover {
+        font-weight:normal;
+    }
+
+    #subnavigation li.leaf a, #subnavigation li.leaf a:hover,
+    #subnavigation li.open li.leaf a, #subnavigation li.open li.leaf a:hover,
+    #subnavigation li.open li.open li.leaf a, #subnavigation li.open li.open li.leaf a:hover {
+        display:block;
+        padding-left:15px;
+        font-weight:normal;
+        background-image:url(/idhtml/images/menu/List_normal.png);
+        background-position:1px 3px;
+        background-repeat:no-repeat;
+        color:#737780;
+    }
+
+    #subnavigation li.inactive a, #subnavigation li.inactive a:hover,
+    #subnavigation li.open li.inactive a, #subnavigation li.open li.inactive a:hover,
+    #subnavigation li.open li.open li.inactive a, #subnavigation li.open li.open li.inactive a:hover {
+        color:#898989;
+        cursor: default;
+    }
+
+/* display nodes */
+    #subnavigation li.node ul,
+    #subnavigation li.open li.node ul,
+    #subnavigation li.open li.open li.node ul,
+    #subnavigation li.open li.open li.open li.node ul {
+        display:none;
+    }
+    #subnavigation li.open ul,
+    #subnavigation li.open li.open ul,
+    #subnavigation li.open li.open li.open ul,
+    #subnavigation li.open li.open li.open li.open ul {
+        display:block;
+    }
+
+
+/* hover */
+    #subnavigation li.leaf a:hover,
+    #subnavigation li.open li.leaf a:hover,
+    #subnavigation li.open li.open li.leaf a:hover {
+        color:#fff;
+    }
+    #subnavigation li.inactive a:hover,
+    #subnavigation li.open li.inactive a:hover,
+    #subnavigation li.open li.open li.inactive a:hover {
+        color:#898989;
+        cursor: default;
+    }
+
+/* selected */
+    #subnavigation ul li.selected a, #subnavigation ul li.selected a:hover,
+    #subnavigation li.selected a, #subnavigation li.selected a:hover,
+    #subnavigation li.open li.selected a, #subnavigation li.open li.selected a:hover,
+    #subnavigation li.open li.open li.selected a,#subnavigation li.open li.open li.selected a:hover {
+        color:#FFFFFF;
+        background-color:#3c3e42;
+        background-image:url(/idhtml/images/menu/List_active.png);
+    }
+
+
+    /* -------------------------------------------------------------------------------------
+    basictreedisplay
+    ======================================================================================*/
+
+/* subnavigation */
+    .basictreedisplay {
+        background-color:#FDFDFD;
+    }
+
+/* tree */
+    .basictreedisplay ul {
+        padding:0 0 5px 0;
+    }
+    .basictreedisplay ul ul {
+        padding:5px 0 5px 5px;
+    }
+    .basictreedisplay ul li {
+        display:block;
+        margin:0 0 3px 0;
+    }
+    .basictreedisplay ul li a {
+        font-size:13px;
+        line-height:13px;
+        color:#334455;
+        text-decoration:none;
+        padding:1px 3px 1px 1px;
+    }
+    .basictreedisplay ul ul li a  {
+        color:#454545;
+    }
+
+/* nodes */
+    .basictreedisplay li.node a,
+    .basictreedisplay li.open li.node a, .basictreedisplay li.open li.node a:hover,
+    .basictreedisplay li.open li.open li.node a, .basictreedisplay li.open li.open li.node a:hover {
+        padding-left:15px;
+        background-image:url(/idhtml/images/menu/ArrowDown_normal.png);
+        background-position:2px 3px;
+        background-repeat:no-repeat;
+        color:#334455;
+    }
+    .basictreedisplay li.node a:hover,
+    .basictreedisplay li.open li.node a:hover,
+    .basictreedisplay li.open li.open li.node a:hover {
+        color:#223344;
+    }
+    .basictreedisplay li.open a, .basictreedisplay li.open a:hover,
+    .basictreedisplay li.open li.open a, .basictreedisplay li.open li.open a:hover,
+    .basictreedisplay li.open li.open li.open a,.basictreedisplay li.open li.open li.open a:hover {
+        background-image:url(/idhtml/images/menu/ArrowUp_active.png);
+        background-position:1px 4px;
+        color:#227799;
+        font-weight:bold;
+    }
+    .basictreedisplay li.open li a, .basictreedisplay li.open li a:hover,
+    .basictreedisplay li.open li.open li a, .basictreedisplay li.open li.open li a:hover {
+        font-weight:normal;
+    }
+
+    .basictreedisplay li.leaf a, .basictreedisplay li.leaf a:hover,
+    .basictreedisplay li.open li.leaf a, .basictreedisplay li.open li.leaf a:hover,
+    .basictreedisplay li.open li.open li.leaf a, .basictreedisplay li.open li.open li.leaf a:hover {
+        display:block;
+        padding-left:15px;
+        font-weight:normal;
+        background-image:url(/idhtml/style/img/icon_leaf.gif);
+        background-position:1px 1px;
+        background-repeat:no-repeat;
+        color:#454545;
+        font-weight:normal;
+    }
+
+/* display nodes */
+    .basictreedisplay li.node ul,
+    .basictreedisplay li.open li.node ul,
+    .basictreedisplay li.open li.open li.node ul,
+    .basictreedisplay li.open li.open li.open li.node ul {
+        display:none;
+    }
+    .basictreedisplay li.open ul,
+    .basictreedisplay li.open li.open ul,
+    .basictreedisplay li.open li.open li.open ul,
+    .basictreedisplay li.open li.open li.open li.open ul {
+        display:block;
+    }
+
+
+/* hover */
+    .basictreedisplay li.leaf a:hover,
+    .basictreedisplay li.open li.leaf a:hover,
+    .basictreedisplay li.open li.open li.leaf a:hover {
+        color:#223344;
+    }
+
+/* selected */
+    .basictreedisplay ul li.selected a, .basictreedisplay ul li.selected a:hover,
+    .basictreedisplay li.selected a, .basictreedisplay li.selected a:hover,
+    .basictreedisplay li.open li.selected a, .basictreedisplay li.open li.selected a:hover,
+    .basictreedisplay li.open li.open li.selected a,.basictreedisplay li.open li.open li.selected a:hover {
+        color:#FFFFFF;
+        background-color:#227799;
+    }
+
+    tr.hoverable {
+        cursor:pointer;
+        cursor:hand;
+    }
+
+    input.date2 {
+        width:55px;
+        float: left;
+        padding:4px 0 3px 4px;
+        cursor:pointer;
+        margin: 0;
+        border-right: 0;
+        font-size: 10px;
+    }
+
+    input.date2:focus {
+        border-right: 0;
+    }
+
+    input.date_manual {
+        font-size: 11px;
+        width:77px;
+        padding:4px 0 3px 2px;
+        margin: 0;
+        cursor:pointer;
+        border-right: 0;
+    }
+
+    input.date_manual:focus {
+        border-right: 0;
+    }
+
+    tr.selected td {
+        background:#60626c !important;
+    }
+
+    .heatmap td {
+        cursor:hand;
+        cursor:pointer;
+    }
+    .basicformtable td {
+        padding:5px;
+    }
+
+    #navigation #system span {
+        padding-right:35px;
+    /*background-image:url(/idhtml/style/img/icon_system.gif);*/
+    }
+
+    #navigation #ext-search span {
+        padding-right:20px;
+    /*background-image:url(/idhtml/style/img/icon_ext_search.gif);*/
+    }
+
+    #navigation #maintenance span {
+        padding-right:35px;
+    /*background-image:url(/idhtml/style/img/icon_maintenance.gif);*/
+    }
+
+    #navigation #news span {
+        padding-right:35px;
+    /*background-image:url(/idhtml/style/img/icon_news.gif);*/
+    }
+
+    #navigation #limit-minder span {
+        padding-right:35px;
+    /*background-image:url(/idhtml/style/img/icon_limit_minder.gif);*/
+    }
+
+    #navigation #lists span {
+        padding-right:35px;
+    /*background-image:url(/idhtml/style/img/icon_lists.gif);*/
+    }
+
+    #navigation #portfolio span {
+        padding-right:35px;
+    /*background-image:url(/idhtml/style/img/icon_portfolio.gif);*/
+    }
+
+    #navigation #screen span {
+        padding-right:35px;
+    /*background-image:url(/idhtml/style/img/icon_screen.gif);*/
+    }
+
+    /* -------------------------------------------------------------------------------------
+    SEARCH FOR CHART
+    ======================================================================================*/
+    #chart_search {
+    }
+
+    #chart_search input, #chart_search select, #chart_search .dropdown, #chart_search .label_checkbox, #chart_search .fieldbox {
+        float:left;
+        margin-right:5px;
+        margin-bottom:0;
+    }
+    #chart_search input.text, #chart_search select.select, #chart_search .dropdown {
+        width:108px;
+    }
+    #chart_search input.submit {
+        margin-right:0;
+    }
+    #chart_search input.checkbox {
+        margin-top:-1px;
+    }
+    #chart_search .fieldbox {
+        float:left;
+        height:15px;
+        padding-right:0;
+        overflow:hidden;
+    }
+    #chart_search fieldset.fieldbox .select {
+        margin-top:-3px;
+        margin-bottom:0;
+        padding:1px 1px 1px 1px;
+        height:20px;
+    }
+    #chart_search fieldset.fieldbox #currency {
+        margin-right:1px;
+    }
+    #chart_search fieldset.fieldbox .select {
+
+    }
+
+    #chart_search .toggler {
+        display:block;
+        float:left;
+        width:23px;
+        height:22px;
+        font-size:0;
+        line-height:0;
+        text-indent:-10000px;
+        background-image:url(/idhtml/images/menu/ShowMore.png);
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-color: #00669e;
+        border: 1px solid #000;
+    }
+    #chart_search .toggler:hover {
+        background-color: #005c8e;
+    }
+    #chart_search .expanded {
+        background-image:url(/idhtml/images/menu/ShowLess.png);
+    }
+    #chart_search .collapsed {
+        background-image:url(/idhtml/images/menu/ShowMore.png);
+    }
+    #chart_search .results {
+        display:block;
+    }
+
+    body.ticker {
+        margin-top:2;
+        margin-bottom:2;
+        margin-left:5;
+        margin-right:5;
+    }
+
+    .ticker_color1{
+        background-color:#C2DEEA;
+        cursor:hand;
+        cursor:pointer;
+    }
+
+    .ticker_color2{
+        background-color:#FFFFFF;
+        cursor:hand;
+        cursor:pointer;
+    }
+
+    .ticker {
+        font-size:16pt;
+        font-weight: bold;
+    }
+
+    .ticker_s {
+        font-size:12pt;
+        font-weight: bold;
+    }
+
+
+    .box_content {
+        overflow-x:auto;
+
+
+    }
+
+
+
+    .tabledata {
+        border:1px solid #000;
+    }
+
+    .tabledata th {
+
+    }
+
+
+    .tabledata tbody tr {
+        cursor:pointer;
+        cursor:hand;
+    }
+
+    .searchresults {
+        top:70px !important;
+    }
+
+    .addlisting_header {
+        padding-bottom : 10px;
+    }
+
+    .marquee {
+        width:100%;
+        overflow:hidden;
+    }
+
+    .marquee_content {
+        position:absolute;
+        width:10000px;
+    }
+
+    .marquee_element {
+        padding: 5px;
+        border-left: 2px solid #1f1f22;
+        border-right: 2px solid #1f1f22;
+    }
+
+    .ticker_color1 {
+        background:#303135;
+    }
+
+    .ticker_color2 {
+        background:#292a30;
+    }
+
+    .listingListTree .node span {
+        margin-left:5px;
+        margin-right:5px;
+        cursor:pointer;
+        cursor:hand;
+    }
+
+    .listingListTree .node img {
+        cursor:pointer;
+        cursor:hand;
+    }
+
+    .listingListTree li.selected > span {
+        background: #227799;
+        color:#FFF;
+    }
+
+    .hilight td {
+        background-color: #787563 !important;
+    }
+
+    #heatmapHints {
+        display: none;
+        border: 1px solid #000;
+        position: absolute;
+        background: #303135;
+        z-index: 100;
+        width: 300px;
+    }
+
+    .hilightMore, .hilightMore .less, .hilightMore .more {
+        color:#fff !important;
+        background:#105f00 !important;
+    }
+
+    .hilightLess, .hilightLess .less, .hilightLess .more {
+        color:#fff !important;
+        background:#730000 !important;
+    }
+
+    .hilightSame, .hilightSame .less, .hilightSame .more {
+        color:#fff !important;
+        background:#4e5261 !important;
+    }
+
+    table.noborder td {
+        border:0px !important;
+        border-right:0px !important;
+        border-bottom:0px !important;
+    }
+
+    table.noborder {
+        border-right:0px !important;
+        border-bottom:0px !important;
+    }
+
+    table.padding10 td {
+        padding:10px;
+    }
+
+    .hiddenTitle{
+        display:none;
+    }
+
+    table.in_form td {
+        padding:0 0 2px 0;
+    }
+
+}
+
+#styles_content {
+    background-color: #1f1f22;
+}
+
+#styles_content ul {
+    padding:0 0 5px 0;
+}
+#styles_content ul ul {
+    padding:5px 0 5px 15px;
+}
+#styles_content ul li {
+    margin:0 0 3px 0;
+    color:#737780;
+}
+
+#styles_content ul li span{
+    white-space: nowrap;
+}
+
+#styles_content ul li a {
+    font-size:13px;
+    line-height:13px;
+    color:#737780;
+    text-decoration:none;
+    padding:1px 3px 1px 1px;
+}
+#styles_content ul ul li a  {
+    color:#737780;
+}
+
+/* nodes */
+#styles_content li.node a,
+#styles_content li.open li.node a, #styles_content li.open li.node a:hover,
+#styles_content li.open li.open li.node a, #styles_content li.open li.open li.node a:hover {
+    padding-left:15px;
+    background-image:url(/idhtml/images/menu/ArrowDown_normal.png);
+    background-position:1px 6px;
+    background-repeat:no-repeat;
+    color:#737780;
+}
+#styles_content li.node a:hover,
+#styles_content li.open li.node a:hover,
+#styles_content li.open li.open li.node a:hover {
+    color:#fff;
+}
+#styles_content li.open a, #styles_content li.open a:hover,
+#styles_content li.open li.open a, #styles_content li.open li.open a:hover,
+#styles_content li.open li.open li.open a,#styles_content li.open li.open li.open a:hover {
+    background-image:url(/idhtml/images/menu/ArrowUp_active.png);
+    background-position:1px 6px;
+    color:#fff;
+}
+#styles_content li.open li a, #styles_content li.open li a:hover,
+#styles_content li.open li.open li a, #styles_content li.open li.open li a:hover {
+    font-weight:normal;
+}
+
+#styles_content li.leaf a, #styles_content li.leaf a:hover,
+#styles_content li.open li.leaf a, #styles_content li.open li.leaf a:hover,
+#styles_content li.open li.open li.leaf a, #styles_content li.open li.open li.leaf a:hover {
+    display:block;
+    padding-left:15px;
+    font-weight:normal;
+    background-image:url(/idhtml/images/menu/List_normal.png);
+    background-position:1px 3px;
+    background-repeat:no-repeat;
+    color:#737780;
+}
+
+#styles_content li.inactive a, #styles_content li.inactive a:hover,
+#styles_content li.open li.inactive a, #styles_content li.open li.inactive a:hover,
+#styles_content li.open li.open li.inactive a, #styles_content li.open li.open li.inactive a:hover {
+    color:#898989;
+    cursor: default;
+}
+
+/* display nodes */
+#styles_content li.node ul,
+#styles_content li.open li.node ul,
+#styles_content li.open li.open li.node ul,
+#styles_content li.open li.open li.open li.node ul {
+    display:none;
+}
+#styles_content li.open ul,
+#styles_content li.open li.open ul,
+#styles_content li.open li.open li.open ul,
+#styles_content li.open li.open li.open li.open ul {
+    display:block;
+}
+
+
+/* hover */
+#styles_content li.leaf a:hover,
+#styles_content li.open li.leaf a:hover,
+#styles_content li.open li.open li.leaf a:hover {
+    color:#fff;
+}
+#styles_content li.inactive a:hover,
+#styles_content li.open li.inactive a:hover,
+#styles_content li.open li.open li.inactive a:hover {
+    color:#898989;
+    cursor: default;
+}
+
+/* selected */
+#styles_content ul li.selected a, #styles_content ul li.selected a:hover,
+#styles_content li.selected a, #styles_content li.selected a:hover,
+#styles_content li.open li.selected a, #styles_content li.open li.selected a:hover,
+#styles_content li.open li.open li.selected a,#styles_content li.open li.open li.selected a:hover {
+    color:#FFFFFF;
+    background-color:#3c3e42;
+    background-image:url(/idhtml/images/menu/List_active.png);
+}
