@@ -32,6 +32,15 @@
 				text-align: center;
 				z-index: 1;
 			}
+
+			#blocker {
+				position: absolute;
+				/* background-color: rgba(255, 0, 0, 0.5); */
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+			}
 		</style>
 	</head>
 	<body>
@@ -39,9 +48,10 @@
 		<script src="js/DeviceOrientationControls.js"></script>
 		<script src="js/CSS3DRenderer.js"></script>
 
-		<div id="info">Desktop Prototype - Team #29 - F10</div>
+		<div id="info">Mobile/VR Prototype - Team #29 - F10</div>
 
         <div id="container"></div>
+		<div id="blocker"></div>
 
 		<script>
 
@@ -54,6 +64,25 @@
 			var phi = 0, theta = 0;
 
             var touchX, touchY;
+
+			var touchX, touchY;
+			var Element = function ( x, y, z, ry ) {
+				var div = document.createElement( 'div' );
+				div.style.width = '800px';
+				div.style.height = '600px';
+				div.style.backgroundColor = '#000';
+				div.style.overflow= 'hidden';
+				var iframe = document.createElement( 'iframe' );
+				iframe.style.width = '800px';
+				iframe.style.height = '600px';
+				iframe.style.border = '0px';
+				iframe.src = '../frontend';
+				div.appendChild( iframe );
+				var object = new THREE.CSS3DObject( div );
+				object.position.set( x, y, z );
+				object.rotation.y = ry;
+				return object;
+			};
             
 			var gyroPresent = false;
 			window.addEventListener("devicemotion", function(event){
@@ -129,6 +158,19 @@
 				renderer.domElement.style.position = 'absolute';
 				document.getElementById( 'container' ).appendChild( renderer.domElement );
 
+				//add window
+				var group = new THREE.Group();
+				group.add( new Element( 0, 0, 500, 3.142 ) );
+				// group.add( new Element( 740, 0, 740, 3.842 ) );
+				// group.add( new Element( -740, 0, 740, 2.442 ) );
+				scene.add( group );
+				window.addEventListener( 'resize', onWindowResize, false );
+
+				// Block iframe events when dragging camera
+				var blocker = document.getElementById( 'blocker' );
+				blocker.style.display = 'none';
+				document.addEventListener( 'mousedown', function () { blocker.style.display = ''; } );
+				document.addEventListener( 'mouseup', function () { blocker.style.display = 'none'; } );
 
 				//
 
