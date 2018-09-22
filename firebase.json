@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "vr/",
+    "public": "/",
     "ignore": [
       "firebase.json",
       "**/.*",
