@@ -37,9 +37,9 @@
 	<body>
 		<script src="js/three.js"></script>
 		<script src="js/DeviceOrientationControls.js"></script>
-		<script src="js/CSS3DStereoRenderer.js"></script>
+		<script src="js/CSS3DRenderer.js"></script>
 
-		<div id="info">Mobile/VR Prototype - Team #29 - F10</div>
+		<div id="info">Desktop Prototype - Team #29 - F10</div>
 
         <div id="container"></div>
 
@@ -124,7 +124,7 @@
 
 				}
 
-                renderer = new THREE.CSS3DStereoRenderer();
+                renderer = new THREE.CSS3DRenderer();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.domElement.style.position = 'absolute';
 				document.getElementById( 'container' ).appendChild( renderer.domElement );
