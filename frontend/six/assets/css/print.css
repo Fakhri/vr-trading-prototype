@@ -1,0 +1,332 @@
+/* filename: print.css */
+
+/* --- NOSE AG Design Intelligence --------------------------------------------------- */
+/* --- CSS Framework: print styles --------------------------------------------------- */
+/* --- TEL0022 SIX iD HTML, BR  ------------------------------------------------- */
+
+@media print {
+
+/* clearfix */
+    .clearfix:after, .columns:after, .cols:after, .fieldgroup:after, .fields:after, #navigation ul:after, #tabnavigation ul:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+/* Safari */
+    .clearfix, .columns, .cols, .fieldgroup, .fields, #navigation ul, #tabnavigation ul {
+        display: block;
+    }
+
+/* Overflow-Methode zum Clearen der Float-Umgebungen */
+
+    /* -------------------------------------------------------------------------------------
+    layout.css
+    ======================================================================================*/
+
+/* general settings */
+    body {
+        font-size: 10pt;
+        line-height: 15pt;
+        text-align: left;
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+
+/* hide areas */
+    #search, #sidebar, #toolbar, #topbar {
+        display: none;
+    }
+
+/* adjust size of areas */
+    html, body, #container, #wrapper, #main, #content {
+        position: inherit;
+        left: 0;
+        top: 0;
+        width: 17cm;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        background-image: none;
+        background-color: #FFFFFF;
+        border: none;
+        overflow: visible;
+    }
+
+/* logo */
+    #header {
+        display: none;
+    }
+
+    #header #logo {
+        display: none;
+    }
+
+    #logo a {
+        display: none;
+    }
+
+    #logo h1 {
+        font-size: 20pt;
+        line-height: 20pt;
+        text-indent: 0;
+        margin: 0 0 3mm 0;
+        visibility: visible;
+    }
+
+    #logo h2 {
+        float: none;
+        font-size: 18pt;
+        line-height: 20pt;
+        text-align: left;
+        padding: 0;
+        margin: 0 0 5mm 0;
+        width: auto;
+        text-indent: 0;
+        color: #000000;
+    }
+
+    /* -------------------------------------------------------------------------------------
+    general.css
+    ======================================================================================*/
+
+/* adjust font size */
+    h1, h2, h3, h4 {
+        color: #000000;
+        font-weight: bold;
+    }
+
+    h1 {
+        position: inherit;
+        font-size: 16pt;
+        font-weight: normal;
+        padding: 0;
+        margin: 0 0 5mm 0;
+        height: auto;
+        border: none;
+        background-image: none;
+        background-color: #FFFFFF;
+    }
+
+    h2 {
+        font-size: 14pt;
+        margin: 0 0 10mm 0;
+    }
+
+    h3 {
+        font-size: 12pt;
+        margin: 0 0 5mm 0;
+    }
+
+    h4 {
+        font-size: 12pt;
+        line-height: 15pt;
+    }
+
+    p, a, ul, ol, ul li, ul li a, ol li, ol li a, table, table th, table td, table tbody th, table tbody td, label, input, textarea {
+        font-size: 9pt;
+        line-height: 15pt;
+        color: #000000;
+    }
+
+/* classes */
+    .center {
+        text-align: left;
+    }
+
+/* list */
+    ul.list li {
+        font-size: 9pt;
+        line-height: 15pt;
+        color: #000000;
+        background-image: none;
+        list-style-type: square;
+        list-style-position: inside;
+        padding-left: 0;
+    }
+
+/* table */
+    table, table.data {
+        background-color: #FFFFFF;
+        border: none;
+        color: #000000;
+    }
+
+    table td, table th, table.data th, table.data td,
+    table th, table th, table.data th, table.data td,
+    table.sortable .header {
+        padding: 0 5px 5px 0;
+        background-color: #FFFFFF;
+        background-image: none;
+        border: none;
+        color: #000000;
+    }
+
+    table th, table th, table th.background, table.background th {
+        font-weight: bold;
+    }
+
+/* columns */
+    .columns {
+    /*width: 17cm;*/
+        float: none;
+    }
+
+    .columns .col55 {
+    /*width: 10cm;*/
+    }
+
+    .columns .col45 {
+    /*width: 8cm;*/
+    }
+
+    #content table.data2, #content table.data2 th, #content table.data2 td {
+        border: 0;
+    }
+
+    #content table.data_small, #content table.data_small th, #content table.data_small td {
+        border: 0;
+    }
+
+    #NH-2-v {
+        display: none;
+    }
+
+    .allsourcescol2 {
+        margin-top: 30px;
+    }
+
+    #vdb_page, #vdb_page table th, #vdb_page table td {
+        font-size: 12pt;
+    }
+
+    #vdb_page a {
+        font-size: 12pt;
+        color: black;
+    }
+
+    /* -------------------------------------------------------------------------------------
+    elements.css
+    ======================================================================================*/
+
+
+/* hide elements */
+    .button, .buttonbar, .ui-datepicker-div, .ui-datepicker, .printBanner, .cache {
+        display: none;
+    }
+
+/* box */
+    .box .box_title, .box_content {
+    /*width: 17cm;*/
+        margin: 0;
+        padding: 0;
+        background-image: none;
+        background-color: #FFFFFF;
+        border: none;
+    }
+
+    .box {
+        margin-bottom: 5mm;
+    }
+
+    .box_title h3 {
+        position: inherit;
+        left: 0;
+        top: 0;
+        font-size: 12pt;
+        border: none;
+        padding: 0 0 5mm 0;
+    }
+
+/* tabs */
+    .tabs, .tabs ul {
+    /*width: 17cm;*/
+        margin: 0;
+        padding: 0;
+        background-image: none;
+        background-color: #FFFFFF;
+        border: none;
+    }
+
+    .tabs ul li {
+        display: none;
+    }
+
+    .tabs ul li.selected {
+        display: block;
+        background-image: none;
+        background-color: #FFFFFF;
+    }
+
+    .tabs ul li.selected a {
+        color: #000000;
+        font-weight: bold;
+        font-size: 12pt;
+        padding: 0 0 5mm;
+    }
+
+    .col33, .col66, .col45, .col50, .col55, .colLeft, .colRight, .col1, .col2, .allsourcescol1, .allsourcescol2 {
+        float: left;
+    }
+
+    .col33 {
+        width: 33.33%;
+    }
+
+    .col66 {
+        width: 66.66%;
+    }
+
+    .col45 {
+        width: 45%;
+    }
+
+    .col50 {
+        width: 49.9%;
+    }
+
+    .col55 {
+        width: 55%;
+    }
+
+    .cols {
+        width: 900px;
+    }
+
+    .col1 {
+        width: 225px;
+    }
+
+    .col2 {
+        width: 500px;
+        margin-right: 10px;
+    }
+
+    .allsourcescol1 {
+        width: 280px;
+    }
+
+    .allsourcescol2 {
+        position: absolute;
+        left: 290px;
+        top: 5px;
+    }
+
+    .col2  .colLeft {
+        width: 220px;
+    }
+
+    .col2  .colRight {
+        width: 210px;
+    }
+
+    .col2 .fieldgroup .colLeft {
+        width: 205px;
+    }
+
+    .col2 .fieldgroup .colRight {
+        width: 200px;
+    }
+}

@@ -1,0 +1,520 @@
+/* filename: general_extension.css */
+
+@media all {
+    /* -------------------------------------------------------------------------------------
+    ADDED STYLES by mbu
+    ======================================================================================*/
+    input.validator_error {
+        padding: 4px 4px 3px 4px;
+        height: 15px;
+        width: 165px;
+        margin: 0 5px 15px 0;
+        border: 1px solid #77889C;
+        background: #ff6666;
+    }
+
+    .text_validator_ok {
+        padding: 4px 4px 3px 4px;
+        height: 15px;
+        width: 165px;
+        margin: 0 5px 15px 0;
+        border: 1px solid #77889C;
+        background: #FDFDFD;
+    }
+
+    /*    input.validator_ok {
+        padding:4px 4px 3px 4px;
+        height:15px;
+        width:165px;
+        margin:0 5px 15px 0;
+        border:1px solid #77889C;
+        background: #ccffcc;
+    }*/
+
+
+    button.icon_button {
+        height: 24px;
+        padding: 3px 4px 6px 4px;
+        margin: 0 5px 0 0;
+        color:#fff;
+        background-color: #00669e;
+        border: 1px solid #000;
+        width: 30px;
+    }
+
+    button.icon_button:hover {
+        background-color: #005c8e;
+    }
+
+    button.icon_button:focus {
+        border: 1px solid #227799;
+    }
+
+    button.button {
+        height: 24px;
+        padding: 1px 4px 6px 4px;
+        margin: 0 5px 0 0;
+        color:#fff;
+        background-color: #00669e;
+        border: 1px solid #000;
+    }
+
+    button.button:hover {
+        background-color: #005c8e;
+    }
+
+    button.button:focus {
+        border: 1px solid #227799;
+    }
+
+    input.disabled, input.disabled:hover, select.disabled, select.disabled:hover {
+        color: #000;
+        background-color: #737780;
+        border: 1px solid #000;
+        cursor: auto;
+    }
+
+    #list {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .listing .header {
+        background-color: #CDD9E1;
+        font-size: 13px;
+        line-height: 15px;
+        color: #223344;
+        padding: 5px 7px 4px 7px;
+        border-left: 1px solid #778899;
+        border-top: 1px solid #778899;
+    }
+
+    .listing .list_color1 {
+        background-color: #EFF3F7;
+        font-size: 13px;
+        line-height: 15px;
+        color: #223344;
+        padding: 5px 7px 4px 7px;
+        border-left: 1px solid #778899;
+        border-top: 1px solid #778899;
+    }
+
+    .listing .list_color2 {
+        background-color: #FFFFFF;
+        background-color: #FFFFFF;
+        font-size: 13px;
+        line-height: 15px;
+        color: #223344;
+        padding: 5px 7px 4px 7px;
+        border-left: 1px solid #778899;
+        border-top: 1px solid #778899;
+    }
+
+    .cache {
+        display: none;
+    }
+
+    #filter_tree_navigation ul.tree {
+        padding: 0;
+    }
+
+    .filter_main_panel {
+        padding-right: 5px;
+    }
+
+    .filter_main_panel .fieldgroup {
+        padding: 2px 5px 2px 5px;
+        width: 253px;
+    }
+
+    .filter_panel {
+        padding: 2px 3px 0 10px;
+    }
+
+    .filter_button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .filter_header {
+        background: #1f1f22;
+        padding: 3px;
+        font-weight: bold;
+        margin-bottom: 3px;
+        margin-top: 5px;
+
+    }
+
+    .filter_header {
+        vertical-align: middle;
+    }
+
+    .filter_fieldset {
+        margin-bottom: 10px;
+    }
+
+    .allsources_group_header {
+        color: #000;
+        background-color: #1f1f22;
+        font-weight: bold;
+    }
+
+    .context_menu {
+        vertical-align: top;
+        width: 250px;
+        padding-right: 10px;
+    }
+
+    .filter_tree_select {
+        clear: both;
+        margin: 3px;
+        padding: 3px;
+        border: 1px solid #FFF
+    }
+
+    .filter_tree_save {
+        clear: both;
+        margin: 3px;
+        padding: 3px;
+        border: 1px solid #000
+    }
+
+    .filter_splitter {
+        clear: both;
+        height: 3px;
+    }
+
+    body.winpopup {
+        background-color: #303135;
+        padding: 10px;
+        margin: auto;
+        overflow: auto;
+    }
+
+    body.winpopup .box_content {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    textarea {
+        padding: 4px 4px 3px 4px;
+        margin: 0 5px 0px 0;
+        background-color: #FDFDFD;
+        border: 1px solid #77889C;
+    }
+
+    .news_buttons {
+        float: right;
+        margin-bottom: 10px;
+    }
+
+    .story {
+        font-family: "Courier New", Courier, mono;
+        font-size: 14px;
+    }
+
+    .story p {
+        font-family: "Courier New", Courier, mono;
+        font-size: 12px;
+        padding: 5px 0;
+
+    }
+
+    .story pre {
+        font-family: "Courier New", Courier, mono;
+        font-size: 12px;
+    }
+
+    .title_s {
+        clear: both;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .title_u {
+        font-weight: normal;
+        font-size: 11px;
+    }
+
+    .fieldgroup_nav {
+        clear: both;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        font-size: 11px;
+    }
+
+    .fieldgroup_nav input, .fieldgroup_nav select {
+        font-size: 11px;
+        line-height: 13px;
+        width: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #334455;
+        margin: 2px;
+    }
+
+    .fieldgroup_nav input.editable-select {
+        margin: 0;
+    }
+
+    .fieldgroup_nav input.newsdate, .fieldgroup_nav input.newstime {
+        cursor: text;
+        height: 15px;
+        line-height: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #334455;
+        background-color: #FDFDFD;
+        border-left: 1px solid #77889C;
+        border-top: 1px solid #77889C;
+        border-bottom: 1px solid #77889C;
+        margin: 0;
+    }
+
+    .fieldgroup_nav input.newsdate {
+        font-size: 9px;
+        width: 50px;
+        padding: 4px 0 3px 3px;
+    }
+
+    .fieldgroup_nav input.newstime {
+        font-size: 11px;
+        width: 49px;
+        border-right: 1px solid #77889C;
+        padding: 3px 0 4px 5px;
+    }
+
+    .fieldgroup_nav input.text {
+        padding: 3px 4px 4px 3px;
+        height: 15px;
+        width: 165px;
+        margin: 0 5px 12px 0;
+        background-color: #FDFDFD;
+        border: 1px solid #77889C;
+    }
+
+    .hints_title {
+        background: #292a30;
+        color: #fff;
+        padding: 5px;
+    }
+
+    #hint td {
+        padding: 3px;
+        font-size: 11px;
+    }
+
+    .hilight td {
+        background-color: #fffddd;
+    }
+
+    #searchcontent {
+        position: fixed;
+        top: 70px;;
+        bottom: 0;
+        right: 10px;
+        left: 10px;
+        padding: 10px;
+        min-width: 974px;
+        overflow: auto;
+        background-color: #EDF5F8;
+        border-right: 1px solid #778898;
+        border-left: 1px solid #778898;
+
+    }
+
+    #searchmain {
+        position: relative;
+        height: 100%;
+        margin: 0 10px 0 10px;
+        z-index: 1;
+    }
+
+    body.calculator #main {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    body.calculator #content {
+        left: 0px;
+        width: 100%;
+    }
+
+    table.data2 {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table.data2 th, table.data2 td {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 1px 4px 1px 4px;
+    }
+
+    table.data2 th {
+        background-color: #303135;
+        text-align: left;
+        padding: 4px;
+    }
+
+    table.data2 td {
+        background-color: #303135;
+    }
+
+    table.data3 {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table.data3 th, table.data3 td {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 1px;
+    }
+
+    table.data3 th {
+        background-color: #303135;
+        text-align: left;
+        padding: 4px;
+    }
+
+    table.data3 td {
+        background-color: #303135;
+    }
+
+    table.data td.matrix {
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
+    }
+
+    td.matrix div {
+        height: auto;
+        padding: 6px 0 0 3px;
+        margin: 0;
+        vertical-align: top;
+    }
+
+    table.data div.matrixImg {
+        display: none;
+        float: left;
+        margin-right: 3px;
+    }
+
+    #savedMsg, #errorMsg {
+        display: none;
+        padding: 3px;
+        margin-bottom: 4px;
+        font-size: 11px;
+    }
+
+    #savedMsg {
+        background-color: #CDD9E1;
+        border: 1px solid #778898;
+    }
+
+    #errorMsg {
+        background-color: #FF9999;
+        border: 1px solid #778898;
+    }
+
+    div.newsInputDD input.text, div.newsInputDD select {
+        vertical-align: top;
+        position: relative;
+        font-size: 12px;
+        border: 1px solid #77889C;
+        padding: 0;
+        margin: 0;
+    }
+
+    div.newsInputDD input.text {
+        height: 18px;
+        line-height: 18px;
+        padding-left: 3px;
+    }
+
+    div.newsInputDD select {
+        height: 20px;
+        line-height: 20px;
+    }
+
+    #topicTableContent {
+        border: 1px solid #999999;
+        background-color: #FFFFE6;
+    }
+
+    ul.newsTopicTableList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #subnavigation ul li.tt {
+        padding: 0;
+        margin: 0;
+    }
+
+    #subnavigation ul li a.stl {
+        font-size: 11px;
+        text-decoration: underline;
+    }
+
+    #subnavigation ul li a.stl:hover {
+        text-decoration: none;
+    }
+
+    ul.newsTopicTableList li table {
+        width: 100%;
+        padding: 3px 0 0 0;
+        margin: 0;
+    }
+
+    ul.newsTopicTableList li table tr {
+        border-bottom: 1px dotted #CCCCCC;
+    }
+
+    ul.newsTopicTableList li table tr td {
+        vertical-align: top;
+    }
+
+    ul.newsTopicTableList li table tr td.cb {
+        padding-left: 2px;
+        width: 18px;
+    }
+
+    ul.newsTopicTableList li table tr td.btn {
+        width: 20px;
+    }
+
+    ul.newsTopicTableList input {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul.newsTopicTableList .delBtn {
+        height: 18px;
+        width: 18px;
+        font-size: 11px;
+        padding: 0;
+    }
+}
+
+@media print {
+    .button {
+        display: none;
+    }
+
+    .story {
+        line-height: 15px;
+    }
+
+    .story p {
+        line-height: 13px;
+    }
+
+    .story pre {
+        line-height: 13px;
+    }
+}
