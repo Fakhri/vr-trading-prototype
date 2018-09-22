@@ -65,13 +65,13 @@
 
             var touchX, touchY;
 			
-			var touchX, touchY;
-			var Element = function ( x, y, z, ry, width, height, url) {
+			var Element = function ( x, y, z, rx, ry, width, height, url) {
 				var div = document.createElement( 'div' );
 				div.style.width = width;
 				div.style.height = height;
 				div.style.backgroundColor = '#000';
-				div.style.overflow= 'hidden';
+				div.style.overflow = 'hidden';
+				div.style.borderRadius = '12px';
 				var iframe = document.createElement( 'iframe' );
 				iframe.style.width = width;
 				iframe.style.height = height;
@@ -80,6 +80,9 @@
 				div.appendChild( iframe );
 				var object = new THREE.CSS3DObject( div );
 				object.position.set( x, y, z );
+				if (rx) {
+					object.rotation.x = rx;
+				}
 				object.rotation.y = ry;
 				return object;
 			};
@@ -162,17 +165,27 @@
 
 				//add window
 				var group = new THREE.Group();
-				group.add( new Element( 500, 0, 0, - Math.PI / 2, 
+				var group = new THREE.Group();
+				group.add( new Element( 500, -60, 0, null, - Math.PI / 2, 
 					'480px', '360px', 
 					'http://www.tkfweb.com/idhtml/screens/overview.jsp') );
-				group.add( new Element( 300, 0, 400, - Math.PI * 3 / 4,
-					'240px', '170px',
+				group.add( new Element( 500, 215, 0, null, - Math.PI / 2,
+					'480px', '170px',
 					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
-				group.add( new Element( 300, 185, 400, - Math.PI * 3 / 4,
-					'240px', '170px',
+				group.add( new Element( 400, -150, 320, null, - Math.PI * 3 / 4,
+					'230px', '170px',
 					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
-				group.add( new Element( 300, 0, -400, - Math.PI / 4,
-					'480px', '360px',
+				group.add( new Element( 400, 30, 320, null, - Math.PI * 3 / 4,
+					'230px', '170px',
+					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
+				group.add( new Element( 400, 210, 320, null, - Math.PI * 3 / 4,
+					'230px', '170px',
+					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
+				group.add( new Element( 400, -50, -320, null, - Math.PI / 4,
+					'230px', '360px',
+					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
+				group.add( new Element( 400, 210, -320, null, - Math.PI / 4,
+					'230px', '170',
 					'http://www.tkfweb.com/idhtml/screens/overview.jsp' ) );
 				scene.add( group );
 				window.addEventListener( 'resize', onWindowResize, false );
