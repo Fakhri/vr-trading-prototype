@@ -418,7 +418,7 @@
     .more {
     }
     table.data th, table.data td, .table td, .table th, table.data_analyse th, table.data_analyse td {
-        font-size:13px;
+        font-size:9px;
         padding:1px 4px 1px 4px;
     }
     table.data_small th, table.data_small td {
