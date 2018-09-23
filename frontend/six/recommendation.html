@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0074)http://www.tkfweb.com/idhtml/detail/overview_red.jsp?listing=908440,67,333 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="gr__tkfweb_com"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<!-- decorator: detail -->
+<title>Recommendation</title>
+
+<!-- javascript -->
+<script type="text/javascript" language="JavaScript" src="assets/telekurs_full.min.js" id="telekurs_full"></script><script type="text/javascript" language="JavaScript" src="assets/jquery-1.5.2.min.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery-ui-1.8.4.custom.min.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.cookie.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.fieldenhancer.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.dropdown.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.toggler.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.contextmenu.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.pull.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.multiselectrow.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.bgiframe.min.js"></script><script type="text/javascript" language="JavaScript" src="assets/jquery.editable-select.pack.js"></script><script type="text/javascript" language="JavaScript" src="assets/telekurs.js"></script><script type="text/javascript" language="JavaScript" src="assets/telekurs_util.js"></script><script type="text/javascript" language="JavaScript" src="assets/shortcuts.js"></script><script type="text/javascript" language="JavaScript" src="assets/general.js"></script><script type="text/javascript" language="JavaScript" src="assets/actions.js"></script>
+<script type="text/javascript" language="JavaScript" src="assets/all_sources.js"></script>
+<script type="text/javascript" language="JavaScript" src="assets/mds_tree.js"></script>
+<!-- style -->
+<link href="assets/telekurs.min.css" rel="stylesheet" type="text/css">
+<style>
+    body {
+        -moz-transform: scale(0.5, 0.5); /* Moz-browsers */
+        zoom: 0.5; /* Other non-webkit browsers */
+        zoom: 50%; /* Webkit browsers */
+    }
+</style>
+<!--[if IE]>
+<link href="/idhtml/style/browser/ie_all.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+<!--[if IE 7]>
+<link href="/idhtml/style/browser/ie_7.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+<!--[if IE 6]>
+<link href="/idhtml/style/browser/ie_6.css" rel="stylesheet" type="text/css"/>
+<![endif]-->
+</head>
+<body class="popup" data-gr-c-s-loaded="true">
+<div id="contextmenu" style="display:none;">
+<!-- -->
+</div>
+<div id="container">
+    <div id="wrapper">
+        <div id="main">
+            <div id="content">
+                <div class="col100">
+                    <script type="text/javascript">
+                        var listName = "NYSE.DJ INDU Index Stocks";
+                        var owner = "TK";
+                    </script>
+
+                    <script language="JavaScript" type="text/javascript">
+                        var contextMenu;
+                        var moveSelection;
+                        var rowIndexes;
+                        jQuery(document).ready(function(){
+                            var window_id=null;
+                            var insert_before = "Insert listing(s) before";
+                            var insert_after = "Insert listing(s) after";
+                            contextMenu= $('#contextMenu').contextmenu({'width':200});
+                            contextMenu.addElement("Details",function(e) {
+                                window_id = window.open("/idhtml/detail/overview_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+// window_id = window.open("/idhtml/detail/overview_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=yes, toolbar=yes, menubar=yes, location=yes, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Derivatives",function(e) {
+                                window_id = window.open("/idhtml/detail/derivative_red.jsp?sc=M&cp=*&derivative_type=warrants&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Option Calculator",function(e) {
+                                window_id = window.open("/idhtml/calculator/calculator_red.jsp?listing=" + listingNr, "calculator", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("All sources",function(e) {
+                                window_id = window.open("/idhtml/detail/arbitrage_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Year chart",function(e) {
+                                window_id = window.open("/idhtml/detail/chart_red.jsp?PERIOD=year1&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Intraday chart",function(e) {
+                                window_id = window.open("/idhtml/detail/chart_red.jsp?PERIOD=avail&listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Timeseries",function(e) {
+                                window_id = window.open("/idhtml/detail/timesales_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Instrument summary",function(e) {
+                                window_id = window.open("/idhtml/detail/vdb_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("News",function(e) {
+                                window_id = window.open("/idhtml/detail/news_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addSplitter();
+                            contextMenu.addElement("Analysis",function(e) {
+                                window_id = window.open("/idhtml/analysis/analyse_red.jsp?listing=" + listingNr, "analysis", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Documents",function(e) {
+                                window_id = window.open("/idhtml/detail/tms_news_red.jsp?listing=" + listingNr, "detail", "width=1030, height=680, status=no, toolbar=no, menubar=no, location=no, resizable=yes, left=10, top=10");
+                                window_id.focus();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addSplitter();
+                            contextMenu.addElement("Add to list",function(e) {
+                                toUserpage('323600,13,814');
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Add to portfolio",function(e) {
+                                toPortfolio();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addElement("Add limit",function(e) {
+                                toLimit();
+                                contextMenu.trigger("close");
+                            });
+                            contextMenu.addSplitter();
+                            contextMenu.addElement("Close menu",function() {contextMenu.trigger("close");},1);
+                        });
+                    </script>
+                    <!-- begin: box -->
+                    <div class="box">
+                        <!-- box title -->
+                        <div class="box_title"><h3>Recommended Stocks for You</h3></div>
+                        <!-- box content -->
+                        <div class="box_content">
+                            <table id="winnerlist" cellspacing="0" class="data hoverable zebra multiselect">
+                                <thead>
+                                <tr class="header list_color1" style="cursor:auto;">
+                                    <th title="Name" align="left" nowrap="nowrap">&nbsp;Name</th>
+                                    <th title="Trend Val/P-Val (adjusted)" align="center" nowrap="nowrap">&nbsp;T(adj)</th>
+                                    <th title="Most Recent Valuation Price" align="right" nowrap="nowrap">&nbsp;LVal</th>
+                                    <th title="Net Change Last/Close (unadjusted)" align="right" nowrap="nowrap">&nbsp;Net L/C</th>
+                                    <th title="% Change Last/Close (unadjusted)" align="right" nowrap="nowrap">&nbsp;Net L/C%</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="list_color1" id="1281709,65,333" onclick="showContextMenu('1281709,65,333',this,event);" ondblclick="doAction('detail', '1281709,65,333')">
+                                        <td height="20" align="left">
+                                            <span title="" class="" id="winnerLooserCachen13903b94">Chevron Rg</span>
+                                        </td>
+                                        <td height="20" align="center">
+                                            <span id="winnerLooserCachen13903b19a"><img src="assets/Trend1.png" alt=""></span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="" id="winnerLooserCachen13903b125">121.13</span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="more" id="winnerLooserCachen13903b195">1.71</span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="more" id="winnerLooserCachen13903b196">+1.43%</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="list_color1" id="1095642,65,333" onclick="showContextMenu('1095642,65,333',this,event);" ondblclick="doAction('detail', '1095642,65,333')" style="cursor: pointer;">
+                                        <td height="20" align="left">
+                                            <span title="" class="" id="winnerLooserCachen10b96894">Verizon Comm Rg</span>
+                                        </td>
+                                        <td height="20" align="center">
+                                            <span id="winnerLooserCachen10b96819a"><img src="assets/Trend1.png" alt=""></span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="" id="winnerLooserCachen10b968125">54.42</span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="more" id="winnerLooserCachen10b968195">0.47</span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="more" id="winnerLooserCachen10b968196">+0.87%</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="list_color2" id="963896,65,333" onclick="showContextMenu('963896,65,333',this,event);" ondblclick="doAction('detail', '963896,65,333')" style="cursor: pointer;">
+                                        <td height="20" align="left">
+                                            <span title="" class="" id="winnerLooserCacheneb6c694">Procter&amp;Gamble Rg</span>
+                                        </td>
+                                        <td height="20" align="center">
+                                            <span id="winnerLooserCacheneb6c619a"><img src="assets/Trend1.png" alt=""></span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="" id="winnerLooserCacheneb6c6125">85.82</span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="more" id="winnerLooserCacheneb6c6195">0.46</span>
+                                        </td>
+                                        <td height="20" align="right">
+                                            <span title="" class="more" id="winnerLooserCacheneb6c6196">+0.54%</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
