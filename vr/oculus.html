@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+    <script src="js/aframe-master.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-sky src="assets/image/puydesancy.jpg" rotation="0 -130 0"></a-sky>
+
+        <!-- <a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="-2.5 0.25 -1.5"
+                rotation="0 15 0"></a-text> -->
+        
+        <a-image src="assets/image/night/nx.jpg" position="0 0 -800" rotation="0 0 0" width="800px" height="600px"></a-image>
+        <a-image src="assets/image/night/nx.jpg" position="800 0 -600" rotation="0 -30 0" width="800px" height="600px"></a-image>
+        <a-image src="assets/image/night/nx.jpg" position="-800 0 -600" rotation="0 30 0" width="800px" height="600px"></a-image>
+    </a-scene>
+  </body>
+</html>
