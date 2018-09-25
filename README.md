@@ -1,4 +1,4 @@
-# F10 Hackathon Product
+# Patrons Virtual Reality
 Reinventing the way to visualize and display financial data by providing personalized virtual experience monitoring using Virtual Reality Technology
 
 ## Demo
