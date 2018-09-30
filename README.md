@@ -1,5 +1,5 @@
-# Patrons Virtual Reality
-Reinventing the way to visualize and display financial data by providing personalized virtual experience monitoring using Virtual Reality Technology. This project is awarded as the top 10 products at F10 Hackathon Singapore (https://f10.ch/fintech-hackathon/singapore2018).
+# Trading Prototype in Virtual Reality
+Reinventing the way to visualize and display financial data by providing personalized virtual experience monitoring using Virtual Reality Technology. This project is developed by Team number 29, Patrons and awarded as the top 10 products at F10 Hackathon Singapore (https://f10.ch/fintech-hackathon/singapore2018).
 
 ## Demo
 1. https://www.youtube.com/watch?v=84FZXeXRwjw
