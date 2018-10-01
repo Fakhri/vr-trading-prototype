@@ -43,7 +43,7 @@
 <body>
 <script src="js/three.js"></script>
 <script src="js/DeviceOrientationControls.js"></script>
-<script src="js/CSS3DStereoRenderer.js"></script>
+<script src="js/CSS3DRenderer.js"></script>
 
 <div id="info">Desktop Prototype - Team #29 - F10</div>
 
@@ -135,7 +135,7 @@
             object.rotation.fromArray( side.rotation );
             scene.add( object );
         }
-        renderer = new THREE.CSS3DStereoRenderer();
+        renderer = new THREE.CSS3DRenderer();
         renderer.setSize( window.innerWidth, window.innerHeight );
         renderer.domElement.style.position = 'absolute';
         document.getElementById( 'container' ).appendChild( renderer.domElement );
