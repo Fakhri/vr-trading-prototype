@@ -5,9 +5,6 @@ As we know, everyday financial people deal with a lot of data and need more than
 1. https://www.youtube.com/watch?v=84FZXeXRwjw
 2. https://www.youtube.com/watch?v=vOcFd6KMgco
 
-## Pitch Deck
-https://docs.google.com/presentation/d/1of_v2icB6iJz4R9MSLr6RMW1tpWBF5z_LWPJzreT8Ek/edit?usp=sharing
-
 ## Technologies
 1. threeJS
 2. aframe
